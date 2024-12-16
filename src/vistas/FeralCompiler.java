@@ -7,10 +7,13 @@ import java.util.logging.Logger;
 
 public class FeralCompiler extends javax.swing.JFrame {
 
-    private static java.awt.Color darkGray = new java.awt.Color(34,34,34);
-    private static java.awt.Color darkJet = new java.awt.Color(54,54,54);
-    private static java.awt.Color gray = new java.awt.Color(117,117,117);
-    private static java.awt.Color platinum = new java.awt.Color(224,224,224);
+    private static java.awt.Color dark28 = new java.awt.Color(28, 28, 28);
+    private static java.awt.Color darkGray = new java.awt.Color(34, 34, 34);
+    private static java.awt.Color darkJet = new java.awt.Color(54, 54, 54);
+    private static java.awt.Color gray = new java.awt.Color(117, 117, 117);
+    private static java.awt.Color whitePlatinum = new java.awt.Color(224, 224, 224);
+    private static java.awt.Color blueAzure = new java.awt.Color(0, 123, 255);
+    private static java.awt.Color orangeFeral = new java.awt.Color(255, 165, 0);
     
     private boolean maximizada = false;
     
@@ -146,30 +149,35 @@ public class FeralCompiler extends javax.swing.JFrame {
         salidaSintactico.setBackground(darkGray);
         salidaConsola.setBackground(darkGray);
         
-        escritorCodigo.setForeground(platinum);
-        salidaLexico.setForeground(platinum);
-        salidaSintactico.setForeground(platinum);
-        salidaConsola.setForeground(platinum);
+        escritorCodigo.setForeground(whitePlatinum);
+        salidaLexico.setForeground(whitePlatinum);
+        salidaSintactico.setForeground(whitePlatinum);
+        salidaConsola.setForeground(whitePlatinum);
         
-        escritorCodigo.setCaretColor(platinum);
+        escritorCodigo.setCaretColor(whitePlatinum);
+    }
+    
+    private void colorearEtiquetas() {
+        tituloEtiqueta1.setForeground(blueAzure);
+        tituloEtiqueta2.setForeground(orangeFeral);
     }
     
     private void colorearBotones() {
         botonAbrir.setBackground(darkGray);
-        botonCrear.setBackground(darkGray);
         botonGuardar.setBackground(darkGray);
+        botonGuardarComo.setBackground(darkGray);
         botonEliminar.setBackground(darkGray);
         botonLimpiar.setBackground(darkGray);
         botonAnalizar.setBackground(darkGray);
         botonCompilar.setBackground(darkGray);
         
-        botonAbrir.setForeground(platinum);
-        botonCrear.setForeground(platinum);
-        botonGuardar.setForeground(platinum);
-        botonEliminar.setForeground(platinum);
-        botonLimpiar.setForeground(platinum);
-        botonAnalizar.setForeground(platinum);
-        botonCompilar.setForeground(platinum);
+        botonAbrir.setForeground(whitePlatinum);
+        botonGuardar.setForeground(whitePlatinum);
+        botonGuardarComo.setForeground(whitePlatinum);
+        botonEliminar.setForeground(whitePlatinum);
+        botonLimpiar.setForeground(whitePlatinum);
+        botonAnalizar.setForeground(whitePlatinum);
+        botonCompilar.setForeground(whitePlatinum);
     }
     
     private void configurarMargenesAAreasDeTexto() {
@@ -185,8 +193,8 @@ public class FeralCompiler extends javax.swing.JFrame {
             java.awt.Font mr14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratRegular).deriveFont(14f);
             
             botonAbrir.setFont(mr14);
-            botonCrear.setFont(mr14);
             botonGuardar.setFont(mr14);
+            botonGuardarComo.setFont(mr14);
             botonEliminar.setFont(mr14);
             botonLimpiar.setFont(mr14);
             botonAnalizar.setFont(mr14);
@@ -212,7 +220,8 @@ public class FeralCompiler extends javax.swing.JFrame {
             mensajeTexto1.setFont(mr12);
             mensajeTexto2.setFont(mr12);
             
-            tituloEtiqueta.setFont(mb14);
+            tituloEtiqueta1.setFont(mb14);
+            tituloEtiqueta2.setFont(mb14);
             lexicoEtiqueta.setFont(mb14);
             sintacticoEtiqueta.setFont(mb14);
             consolaEtiqueta.setFont(mb14);
@@ -250,12 +259,19 @@ public class FeralCompiler extends javax.swing.JFrame {
             }
             
             @Override
+            public void mousePressed(java.awt.event.MouseEvent e) {
+                botonAbrir.setBackground(dark28);
+                botonAbrir.setForeground(blueAzure);
+            }
+            
+            @Override
             public void mouseEntered(java.awt.event.MouseEvent e) {
                 try {
                     java.io.File montserratNegrita = new java.io.File("src/recursos/fuentes/montserrat/Montserrat-Bold.ttf");
                     java.awt.Font mb14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratNegrita).deriveFont(14f);
                     
                     botonAbrir.setFont(mb14);
+                    botonAbrir.setForeground(orangeFeral);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
@@ -279,56 +295,22 @@ public class FeralCompiler extends javax.swing.JFrame {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 botonAbrir.setBackground(darkGray);
+                botonAbrir.setForeground(whitePlatinum);
                 java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
                 botonAbrir.setCursor(cursorPuntero);
-            }
-        });
-        
-        botonCrear.addMouseListener(new java.awt.event.MouseAdapter() {
-            @Override
-            public void mouseClicked(java.awt.event.MouseEvent e) {
-                // accion de crear
-            }
-            
-            @Override
-            public void mouseEntered(java.awt.event.MouseEvent e) {
-                try {
-                    java.io.File montserratNegrita = new java.io.File("src/recursos/fuentes/montserrat/Montserrat-Bold.ttf");
-                    java.awt.Font mb14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratNegrita).deriveFont(14f);
-                    
-                    botonCrear.setFont(mb14);
-                } catch (FontFormatException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                botonCrear.setBackground(darkJet);
-                java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
-                botonCrear.setCursor(cursorMano);
-            }
-
-            @Override
-            public void mouseExited(java.awt.event.MouseEvent e) {
-                try {
-                    java.io.File montserratRegular = new java.io.File("src/recursos/fuentes/montserrat/Montserrat-Regular.ttf");
-                    java.awt.Font mr14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratRegular).deriveFont(14f);
-                    
-                    botonCrear.setFont(mr14);
-                } catch (FontFormatException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                botonCrear.setBackground(darkGray);
-                java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
-                botonCrear.setCursor(cursorPuntero);
             }
         });
         
         botonGuardar.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e) {
-                // accion de guardar
+                // accion de crear
+            }
+            
+            @Override
+            public void mousePressed(java.awt.event.MouseEvent e) {
+                botonGuardar.setBackground(dark28);
+                botonGuardar.setForeground(blueAzure);
             }
             
             @Override
@@ -338,6 +320,7 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mb14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratNegrita).deriveFont(14f);
                     
                     botonGuardar.setFont(mb14);
+                    botonGuardar.setForeground(orangeFeral);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
@@ -355,6 +338,7 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mr14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratRegular).deriveFont(14f);
                     
                     botonGuardar.setFont(mr14);
+                    botonGuardar.setForeground(whitePlatinum);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
@@ -366,10 +350,65 @@ public class FeralCompiler extends javax.swing.JFrame {
             }
         });
         
+        botonGuardarComo.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent e) {
+                // accion de guardar
+            }
+            
+            @Override
+            public void mousePressed(java.awt.event.MouseEvent e) {
+                botonGuardarComo.setBackground(dark28);
+                botonGuardarComo.setForeground(blueAzure);
+            }
+            
+            @Override
+            public void mouseEntered(java.awt.event.MouseEvent e) {
+                try {
+                    java.io.File montserratNegrita = new java.io.File("src/recursos/fuentes/montserrat/Montserrat-Bold.ttf");
+                    java.awt.Font mb14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratNegrita).deriveFont(14f);
+                    
+                    botonGuardarComo.setFont(mb14);
+                    botonGuardarComo.setForeground(orangeFeral);
+                } catch (FontFormatException ex) {
+                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IOException ex) {
+                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                botonGuardarComo.setBackground(darkJet);
+                java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
+                botonGuardarComo.setCursor(cursorMano);
+            }
+
+            @Override
+            public void mouseExited(java.awt.event.MouseEvent e) {
+                try {
+                    java.io.File montserratRegular = new java.io.File("src/recursos/fuentes/montserrat/Montserrat-Regular.ttf");
+                    java.awt.Font mr14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratRegular).deriveFont(14f);
+                    
+                    botonGuardarComo.setFont(mr14);
+                    botonGuardarComo.setForeground(whitePlatinum);
+                } catch (FontFormatException ex) {
+                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IOException ex) {
+                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                botonGuardarComo.setBackground(darkGray);
+                java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
+                botonGuardarComo.setCursor(cursorPuntero);
+            }
+        });
+        
         botonEliminar.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e) {
                 // accion de eliminar
+            }
+            
+            @Override
+            public void mousePressed(java.awt.event.MouseEvent e) {
+                botonEliminar.setBackground(dark28);
+                botonEliminar.setForeground(blueAzure);
             }
             
             @Override
@@ -379,6 +418,7 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mb14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratNegrita).deriveFont(14f);
                     
                     botonEliminar.setFont(mb14);
+                    botonEliminar.setForeground(orangeFeral);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
@@ -396,6 +436,7 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mr14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratRegular).deriveFont(14f);
                     
                     botonEliminar.setFont(mr14);
+                    botonEliminar.setForeground(whitePlatinum);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
@@ -414,12 +455,19 @@ public class FeralCompiler extends javax.swing.JFrame {
             }
             
             @Override
+            public void mousePressed(java.awt.event.MouseEvent e) {
+                botonLimpiar.setBackground(dark28);
+                botonLimpiar.setForeground(blueAzure);
+            }
+            
+            @Override
             public void mouseEntered(java.awt.event.MouseEvent e) {
                 try {
                     java.io.File montserratNegrita = new java.io.File("src/recursos/fuentes/montserrat/Montserrat-Bold.ttf");
                     java.awt.Font mb14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratNegrita).deriveFont(14f);
                     
                     botonLimpiar.setFont(mb14);
+                    botonLimpiar.setForeground(orangeFeral);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
@@ -437,6 +485,7 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mr14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratRegular).deriveFont(14f);
                     
                     botonLimpiar.setFont(mr14);
+                    botonLimpiar.setForeground(whitePlatinum);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
@@ -455,12 +504,19 @@ public class FeralCompiler extends javax.swing.JFrame {
             }
             
             @Override
+            public void mousePressed(java.awt.event.MouseEvent e) {
+                botonAnalizar.setBackground(dark28);
+                botonAnalizar.setForeground(blueAzure);
+            }
+            
+            @Override
             public void mouseEntered(java.awt.event.MouseEvent e) {
                 try {
                     java.io.File montserratNegrita = new java.io.File("src/recursos/fuentes/montserrat/Montserrat-Bold.ttf");
                     java.awt.Font mb14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratNegrita).deriveFont(14f);
                     
                     botonAnalizar.setFont(mb14);
+                    botonAnalizar.setForeground(orangeFeral);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
@@ -478,6 +534,7 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mr14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratRegular).deriveFont(14f);
                     
                     botonAnalizar.setFont(mr14);
+                    botonAnalizar.setForeground(whitePlatinum);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
@@ -496,12 +553,19 @@ public class FeralCompiler extends javax.swing.JFrame {
             }
             
             @Override
+            public void mousePressed(java.awt.event.MouseEvent e) {
+                botonCompilar.setBackground(dark28);
+                botonCompilar.setForeground(blueAzure);
+            }
+            
+            @Override
             public void mouseEntered(java.awt.event.MouseEvent e) {
                 try {
                     java.io.File montserratNegrita = new java.io.File("src/recursos/fuentes/montserrat/Montserrat-Bold.ttf");
                     java.awt.Font mb14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratNegrita).deriveFont(14f);
                     
                     botonCompilar.setFont(mb14);
+                    botonCompilar.setForeground(orangeFeral);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
@@ -525,6 +589,7 @@ public class FeralCompiler extends javax.swing.JFrame {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 botonCompilar.setBackground(darkGray);
+                botonCompilar.setForeground(whitePlatinum);
                 java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
                 botonCompilar.setCursor(cursorPuntero);
             }
@@ -534,6 +599,7 @@ public class FeralCompiler extends javax.swing.JFrame {
     private void personalizarComponentes() {
         colorearSeparadores();
         colorearAreasDeTexto();
+        colorearEtiquetas();
         colorearBotones();
         accionarBotonesPanel();
         importarFuentesABotones();
@@ -553,19 +619,21 @@ public class FeralCompiler extends javax.swing.JFrame {
         botonMaximizar = new javax.swing.JLabel();
         divisorPaneles = new javax.swing.JSplitPane();
         botonesPanel = new javax.swing.JPanel();
-        tituloEtiqueta = new javax.swing.JLabel();
+        tituloPanel = new javax.swing.JPanel();
+        tituloEtiqueta1 = new javax.swing.JLabel();
+        tituloEtiqueta2 = new javax.swing.JLabel();
         versionEtiqueta = new javax.swing.JLabel();
         mensajeTexto1 = new javax.swing.JLabel();
         mensajeTexto2 = new javax.swing.JLabel();
+        separadorLineal1 = new javax.swing.JSeparator();
         botonAbrir = new javax.swing.JLabel();
-        botonCrear = new javax.swing.JLabel();
         botonGuardar = new javax.swing.JLabel();
+        botonGuardarComo = new javax.swing.JLabel();
         botonEliminar = new javax.swing.JLabel();
+        separadorLineal2 = new javax.swing.JSeparator();
         botonLimpiar = new javax.swing.JLabel();
         botonAnalizar = new javax.swing.JLabel();
         botonCompilar = new javax.swing.JLabel();
-        separadorLineal1 = new javax.swing.JSeparator();
-        separadorLineal2 = new javax.swing.JSeparator();
         divisorCodigo = new javax.swing.JScrollPane();
         escritorCodigo = new javax.swing.JTextArea();
         lexicoEtiqueta = new javax.swing.JLabel();
@@ -626,41 +694,57 @@ public class FeralCompiler extends javax.swing.JFrame {
 
         botonesPanel.setBackground(new java.awt.Color(34, 34, 34));
 
-        tituloEtiqueta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        tituloEtiqueta.setForeground(new java.awt.Color(240, 240, 240));
-        tituloEtiqueta.setText("FeralCompiler");
+        tituloPanel.setBackground(new java.awt.Color(34, 34, 34));
+        tituloPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tituloEtiqueta1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tituloEtiqueta1.setForeground(new java.awt.Color(240, 240, 240));
+        tituloEtiqueta1.setText("Feral");
+        tituloPanel.add(tituloEtiqueta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
+
+        tituloEtiqueta2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tituloEtiqueta2.setForeground(new java.awt.Color(240, 240, 240));
+        tituloEtiqueta2.setText("Compiler");
+        tituloPanel.add(tituloEtiqueta2, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 6, -1, -1));
 
         versionEtiqueta.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         versionEtiqueta.setForeground(new java.awt.Color(240, 240, 240));
         versionEtiqueta.setText("Versión 1.0");
+        tituloPanel.add(versionEtiqueta, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 11, -1, -1));
 
         mensajeTexto1.setForeground(new java.awt.Color(240, 240, 240));
         mensajeTexto1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mensajeTexto1.setText("¿Qué vas hacer el día");
+        tituloPanel.add(mensajeTexto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 38, 176, -1));
 
         mensajeTexto2.setForeground(new java.awt.Color(240, 240, 240));
         mensajeTexto2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mensajeTexto2.setText("de hoy?");
+        tituloPanel.add(mensajeTexto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 60, 176, -1));
+
+        separadorLineal1.setOpaque(true);
 
         botonAbrir.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         botonAbrir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         botonAbrir.setText("Abrir archivo");
         botonAbrir.setOpaque(true);
 
-        botonCrear.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        botonCrear.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        botonCrear.setText("Crear archivo");
-        botonCrear.setOpaque(true);
-
         botonGuardar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         botonGuardar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         botonGuardar.setText("Guardar archivo");
         botonGuardar.setOpaque(true);
 
+        botonGuardarComo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        botonGuardarComo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        botonGuardarComo.setText("Guardar como");
+        botonGuardarComo.setOpaque(true);
+
         botonEliminar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         botonEliminar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         botonEliminar.setText("Eliminar archivo");
         botonEliminar.setOpaque(true);
+
+        separadorLineal2.setOpaque(true);
 
         botonLimpiar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         botonLimpiar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -677,17 +761,13 @@ public class FeralCompiler extends javax.swing.JFrame {
         botonCompilar.setText("Compilar");
         botonCompilar.setOpaque(true);
 
-        separadorLineal1.setOpaque(true);
-
-        separadorLineal2.setOpaque(true);
-
         javax.swing.GroupLayout botonesPanelLayout = new javax.swing.GroupLayout(botonesPanel);
         botonesPanel.setLayout(botonesPanelLayout);
         botonesPanelLayout.setHorizontalGroup(
             botonesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(botonAbrir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(botonCrear, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(botonGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(botonGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+            .addComponent(botonGuardarComo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(botonEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(botonAnalizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(botonCompilar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -696,34 +776,23 @@ public class FeralCompiler extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(botonesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(separadorLineal2)
-                    .addGroup(botonesPanelLayout.createSequentialGroup()
-                        .addComponent(tituloEtiqueta)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
-                        .addComponent(versionEtiqueta))
-                    .addComponent(mensajeTexto2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(mensajeTexto1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(separadorLineal1, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(separadorLineal1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(tituloPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         botonesPanelLayout.setVerticalGroup(
             botonesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botonesPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(botonesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tituloEtiqueta)
-                    .addComponent(versionEtiqueta))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(mensajeTexto1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(mensajeTexto2)
+                .addComponent(tituloPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(separadorLineal1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botonAbrir, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botonCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botonGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(botonGuardarComo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
@@ -734,7 +803,7 @@ public class FeralCompiler extends javax.swing.JFrame {
                 .addComponent(botonAnalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botonCompilar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         divisorPaneles.setLeftComponent(botonesPanel);
@@ -784,12 +853,10 @@ public class FeralCompiler extends javax.swing.JFrame {
                 .addGroup(panelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(divisorLexico)
                     .addComponent(divisorSintactico)
-                    .addGroup(panelFondoLayout.createSequentialGroup()
-                        .addComponent(consolaEtiqueta)
-                        .addGap(202, 202, 202))
                     .addComponent(divisorSintactico1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(panelFondoLayout.createSequentialGroup()
                         .addGroup(panelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(consolaEtiqueta)
                             .addComponent(lexicoEtiqueta)
                             .addComponent(sintacticoEtiqueta))
                         .addGap(181, 181, 181)))
@@ -841,9 +908,9 @@ public class FeralCompiler extends javax.swing.JFrame {
     private javax.swing.JLabel botonAnalizar;
     private javax.swing.JLabel botonCerrar;
     private javax.swing.JLabel botonCompilar;
-    private javax.swing.JLabel botonCrear;
     private javax.swing.JLabel botonEliminar;
     private javax.swing.JLabel botonGuardar;
+    private javax.swing.JLabel botonGuardarComo;
     private javax.swing.JLabel botonLimpiar;
     private javax.swing.JLabel botonMaximizar;
     private javax.swing.JLabel botonMinimizar;
@@ -865,7 +932,9 @@ public class FeralCompiler extends javax.swing.JFrame {
     private javax.swing.JSeparator separadorLineal1;
     private javax.swing.JSeparator separadorLineal2;
     private javax.swing.JLabel sintacticoEtiqueta;
-    private javax.swing.JLabel tituloEtiqueta;
+    private javax.swing.JLabel tituloEtiqueta1;
+    private javax.swing.JLabel tituloEtiqueta2;
+    private javax.swing.JPanel tituloPanel;
     private javax.swing.JLabel versionEtiqueta;
     // End of variables declaration//GEN-END:variables
 }
