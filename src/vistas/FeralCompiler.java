@@ -7,17 +7,15 @@ import java.util.logging.Logger;
 
 public class FeralCompiler extends javax.swing.JFrame {
 
-    private static java.awt.Color dark28 = new java.awt.Color(28, 28, 28);
-    private static java.awt.Color darkGray = new java.awt.Color(34, 34, 34);
-    private static java.awt.Color darkJet = new java.awt.Color(54, 54, 54);
-    private static java.awt.Color gray = new java.awt.Color(117, 117, 117);
-    private static java.awt.Color whitePlatinum = new java.awt.Color(224, 224, 224);
-    private static java.awt.Color blueAzure = new java.awt.Color(0, 123, 255);
-    private static java.awt.Color orangeFeral = new java.awt.Color(255, 165, 0);
+    private static java.awt.Color negro28 = new java.awt.Color(28, 28, 28);
+    private static java.awt.Color grisOscuro = new java.awt.Color(34, 34, 34);
+    private static java.awt.Color oscuroJet = new java.awt.Color(54, 54, 54);
+    private static java.awt.Color gris = new java.awt.Color(117, 117, 117);
+    private static java.awt.Color blancoPlatino = new java.awt.Color(224, 224, 224);
+    private static java.awt.Color azulAzur = new java.awt.Color(0, 123, 255);
+    private static java.awt.Color naranjaFeral = new java.awt.Color(255, 165, 0);
     
     private boolean maximizada = false;
-    
-    private javax.swing.JTextPane numeroDeLinea;
     
     public FeralCompiler() {
         initComponents();
@@ -41,7 +39,7 @@ public class FeralCompiler extends javax.swing.JFrame {
 
             @Override
             public void mouseExited(java.awt.event.MouseEvent e) {
-                botonCerrar.setBackground(darkGray);
+                botonCerrar.setBackground(grisOscuro);
                 java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
                 botonCerrar.setCursor(cursorPuntero);
             }
@@ -63,14 +61,14 @@ public class FeralCompiler extends javax.swing.JFrame {
             
             @Override
             public void mouseEntered(java.awt.event.MouseEvent e) {
-                botonMaximizar.setBackground(darkJet);
+                botonMaximizar.setBackground(oscuroJet);
                 java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
                 botonMaximizar.setCursor(cursorMano);
             }
 
             @Override
             public void mouseExited(java.awt.event.MouseEvent e) {
-                botonMaximizar.setBackground(darkGray);
+                botonMaximizar.setBackground(grisOscuro);
                 java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
                 botonMaximizar.setCursor(cursorPuntero);
             }
@@ -86,14 +84,14 @@ public class FeralCompiler extends javax.swing.JFrame {
             
             @Override
             public void mouseEntered(java.awt.event.MouseEvent e) {
-                botonMinimizar.setBackground(darkJet);
+                botonMinimizar.setBackground(oscuroJet);
                 java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
                 botonMinimizar.setCursor(cursorMano);
             }
 
             @Override
             public void mouseExited(java.awt.event.MouseEvent e) {
-                botonMinimizar.setBackground(darkGray);
+                botonMinimizar.setBackground(grisOscuro);
                 java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
                 botonMinimizar.setCursor(cursorPuntero);
             }
@@ -122,9 +120,9 @@ public class FeralCompiler extends javax.swing.JFrame {
     }
     
     private void colorearBarraDeNavegacion() {
-        botonCerrar.setBackground(darkGray);
-        botonMaximizar.setBackground(darkGray);
-        botonMinimizar.setBackground(darkGray);
+        botonCerrar.setBackground(grisOscuro);
+        botonMaximizar.setBackground(grisOscuro);
+        botonMinimizar.setBackground(grisOscuro);
     }
     
     private void personalizarBarraDeNavegacion() {
@@ -136,52 +134,52 @@ public class FeralCompiler extends javax.swing.JFrame {
     }
     
     private void colorearSeparadores() {
-        separadorLineal1.setBackground(darkGray);
-        separadorLineal2.setBackground(darkGray);
+        separadorLineal1.setBackground(grisOscuro);
+        separadorLineal2.setBackground(grisOscuro);
         
-        separadorLineal1.setForeground(gray);
-        separadorLineal2.setForeground(gray);
+        separadorLineal1.setForeground(gris);
+        separadorLineal2.setForeground(gris);
     }
     
     private void colorearAreasDeTexto() {
-        escritorCodigo.setBackground(darkGray);
-        salidaLexico.setBackground(darkGray);
-        salidaSintactico.setBackground(darkGray);
-        salidaConsola.setBackground(darkGray);
+        escritorCodigo.setBackground(grisOscuro);
+        salidaLexico.setBackground(grisOscuro);
+        salidaSintactico.setBackground(grisOscuro);
+        salidaConsola.setBackground(grisOscuro);
         
-        escritorCodigo.setForeground(whitePlatinum);
-        salidaLexico.setForeground(whitePlatinum);
-        salidaSintactico.setForeground(whitePlatinum);
-        salidaConsola.setForeground(whitePlatinum);
+        escritorCodigo.setForeground(blancoPlatino);
+        salidaLexico.setForeground(blancoPlatino);
+        salidaSintactico.setForeground(blancoPlatino);
+        salidaConsola.setForeground(blancoPlatino);
         
-        escritorCodigo.setCaretColor(whitePlatinum);
+        escritorCodigo.setCaretColor(naranjaFeral);
     }
     
     private void colorearEtiquetas() {
-        tituloEtiqueta1.setForeground(blueAzure);
-        tituloEtiqueta2.setForeground(orangeFeral);
+        tituloEtiqueta1.setForeground(azulAzur);
+        tituloEtiqueta2.setForeground(naranjaFeral);
     }
     
     private void colorearBotones() {
-        botonAbrir.setBackground(darkGray);
-        botonGuardar.setBackground(darkGray);
-        botonGuardarComo.setBackground(darkGray);
-        botonEliminar.setBackground(darkGray);
-        botonLimpiar.setBackground(darkGray);
-        botonAnalizar.setBackground(darkGray);
-        botonCompilar.setBackground(darkGray);
+        botonAbrir.setBackground(grisOscuro);
+        botonGuardar.setBackground(grisOscuro);
+        botonGuardarComo.setBackground(grisOscuro);
+        botonEliminar.setBackground(grisOscuro);
+        botonLimpiar.setBackground(grisOscuro);
+        botonAnalizar.setBackground(grisOscuro);
+        botonCompilar.setBackground(grisOscuro);
         
-        botonAbrir.setForeground(whitePlatinum);
-        botonGuardar.setForeground(whitePlatinum);
-        botonGuardarComo.setForeground(whitePlatinum);
-        botonEliminar.setForeground(whitePlatinum);
-        botonLimpiar.setForeground(whitePlatinum);
-        botonAnalizar.setForeground(whitePlatinum);
-        botonCompilar.setForeground(whitePlatinum);
+        botonAbrir.setForeground(blancoPlatino);
+        botonGuardar.setForeground(blancoPlatino);
+        botonGuardarComo.setForeground(blancoPlatino);
+        botonEliminar.setForeground(blancoPlatino);
+        botonLimpiar.setForeground(blancoPlatino);
+        botonAnalizar.setForeground(blancoPlatino);
+        botonCompilar.setForeground(blancoPlatino);
     }
     
     private void configurarMargenesAAreasDeTexto() {
-        escritorCodigo.setBorder(javax.swing.BorderFactory.createEmptyBorder(10,10,10,10));
+        //escritorCodigo.setBorder(javax.swing.BorderFactory.createEmptyBorder(10,10,10,10));
         salidaLexico.setBorder(javax.swing.BorderFactory.createEmptyBorder(10,10,10,10));
         salidaSintactico.setBorder(javax.swing.BorderFactory.createEmptyBorder(10,10,10,10));
         salidaConsola.setBorder(javax.swing.BorderFactory.createEmptyBorder(10,10,10,10));
@@ -237,9 +235,7 @@ public class FeralCompiler extends javax.swing.JFrame {
         try {
             java.io.File courierRegular = new java.io.File("src/recursos/fuentes/courier/CourierPrime-Regular.ttf");
             java.awt.Font cr12 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, courierRegular).deriveFont(12f);
-            java.awt.Font cr14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, courierRegular).deriveFont(14f);
             
-            escritorCodigo.setFont(cr14);
             salidaLexico.setFont(cr12);
             salidaSintactico.setFont(cr12);
             salidaConsola.setFont(cr12);
@@ -260,8 +256,8 @@ public class FeralCompiler extends javax.swing.JFrame {
             
             @Override
             public void mousePressed(java.awt.event.MouseEvent e) {
-                botonAbrir.setBackground(dark28);
-                botonAbrir.setForeground(blueAzure);
+                botonAbrir.setBackground(negro28);
+                botonAbrir.setForeground(azulAzur);
             }
             
             @Override
@@ -271,13 +267,13 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mb14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratNegrita).deriveFont(14f);
                     
                     botonAbrir.setFont(mb14);
-                    botonAbrir.setForeground(orangeFeral);
+                    botonAbrir.setForeground(naranjaFeral);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                botonAbrir.setBackground(darkJet);
+                botonAbrir.setBackground(oscuroJet);
                 java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
                 botonAbrir.setCursor(cursorMano);
             }
@@ -294,8 +290,8 @@ public class FeralCompiler extends javax.swing.JFrame {
                 } catch (IOException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                botonAbrir.setBackground(darkGray);
-                botonAbrir.setForeground(whitePlatinum);
+                botonAbrir.setBackground(grisOscuro);
+                botonAbrir.setForeground(blancoPlatino);
                 java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
                 botonAbrir.setCursor(cursorPuntero);
             }
@@ -309,8 +305,8 @@ public class FeralCompiler extends javax.swing.JFrame {
             
             @Override
             public void mousePressed(java.awt.event.MouseEvent e) {
-                botonGuardar.setBackground(dark28);
-                botonGuardar.setForeground(blueAzure);
+                botonGuardar.setBackground(negro28);
+                botonGuardar.setForeground(azulAzur);
             }
             
             @Override
@@ -320,13 +316,13 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mb14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratNegrita).deriveFont(14f);
                     
                     botonGuardar.setFont(mb14);
-                    botonGuardar.setForeground(orangeFeral);
+                    botonGuardar.setForeground(naranjaFeral);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                botonGuardar.setBackground(darkJet);
+                botonGuardar.setBackground(oscuroJet);
                 java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
                 botonGuardar.setCursor(cursorMano);
             }
@@ -338,13 +334,13 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mr14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratRegular).deriveFont(14f);
                     
                     botonGuardar.setFont(mr14);
-                    botonGuardar.setForeground(whitePlatinum);
+                    botonGuardar.setForeground(blancoPlatino);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                botonGuardar.setBackground(darkGray);
+                botonGuardar.setBackground(grisOscuro);
                 java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
                 botonGuardar.setCursor(cursorPuntero);
             }
@@ -358,8 +354,8 @@ public class FeralCompiler extends javax.swing.JFrame {
             
             @Override
             public void mousePressed(java.awt.event.MouseEvent e) {
-                botonGuardarComo.setBackground(dark28);
-                botonGuardarComo.setForeground(blueAzure);
+                botonGuardarComo.setBackground(negro28);
+                botonGuardarComo.setForeground(azulAzur);
             }
             
             @Override
@@ -369,13 +365,13 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mb14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratNegrita).deriveFont(14f);
                     
                     botonGuardarComo.setFont(mb14);
-                    botonGuardarComo.setForeground(orangeFeral);
+                    botonGuardarComo.setForeground(naranjaFeral);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                botonGuardarComo.setBackground(darkJet);
+                botonGuardarComo.setBackground(oscuroJet);
                 java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
                 botonGuardarComo.setCursor(cursorMano);
             }
@@ -387,13 +383,13 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mr14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratRegular).deriveFont(14f);
                     
                     botonGuardarComo.setFont(mr14);
-                    botonGuardarComo.setForeground(whitePlatinum);
+                    botonGuardarComo.setForeground(blancoPlatino);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                botonGuardarComo.setBackground(darkGray);
+                botonGuardarComo.setBackground(grisOscuro);
                 java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
                 botonGuardarComo.setCursor(cursorPuntero);
             }
@@ -407,8 +403,8 @@ public class FeralCompiler extends javax.swing.JFrame {
             
             @Override
             public void mousePressed(java.awt.event.MouseEvent e) {
-                botonEliminar.setBackground(dark28);
-                botonEliminar.setForeground(blueAzure);
+                botonEliminar.setBackground(negro28);
+                botonEliminar.setForeground(azulAzur);
             }
             
             @Override
@@ -418,13 +414,13 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mb14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratNegrita).deriveFont(14f);
                     
                     botonEliminar.setFont(mb14);
-                    botonEliminar.setForeground(orangeFeral);
+                    botonEliminar.setForeground(naranjaFeral);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                botonEliminar.setBackground(darkJet);
+                botonEliminar.setBackground(oscuroJet);
                 java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
                 botonEliminar.setCursor(cursorMano);
             }
@@ -436,13 +432,13 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mr14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratRegular).deriveFont(14f);
                     
                     botonEliminar.setFont(mr14);
-                    botonEliminar.setForeground(whitePlatinum);
+                    botonEliminar.setForeground(blancoPlatino);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                botonEliminar.setBackground(darkGray);
+                botonEliminar.setBackground(grisOscuro);
                 java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
                 botonEliminar.setCursor(cursorPuntero);
             }
@@ -456,8 +452,8 @@ public class FeralCompiler extends javax.swing.JFrame {
             
             @Override
             public void mousePressed(java.awt.event.MouseEvent e) {
-                botonLimpiar.setBackground(dark28);
-                botonLimpiar.setForeground(blueAzure);
+                botonLimpiar.setBackground(negro28);
+                botonLimpiar.setForeground(azulAzur);
             }
             
             @Override
@@ -467,13 +463,13 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mb14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratNegrita).deriveFont(14f);
                     
                     botonLimpiar.setFont(mb14);
-                    botonLimpiar.setForeground(orangeFeral);
+                    botonLimpiar.setForeground(naranjaFeral);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                botonLimpiar.setBackground(darkJet);
+                botonLimpiar.setBackground(oscuroJet);
                 java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
                 botonLimpiar.setCursor(cursorMano);
             }
@@ -485,13 +481,13 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mr14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratRegular).deriveFont(14f);
                     
                     botonLimpiar.setFont(mr14);
-                    botonLimpiar.setForeground(whitePlatinum);
+                    botonLimpiar.setForeground(blancoPlatino);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                botonLimpiar.setBackground(darkGray);
+                botonLimpiar.setBackground(grisOscuro);
                 java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
                 botonLimpiar.setCursor(cursorPuntero);
             }
@@ -505,8 +501,8 @@ public class FeralCompiler extends javax.swing.JFrame {
             
             @Override
             public void mousePressed(java.awt.event.MouseEvent e) {
-                botonAnalizar.setBackground(dark28);
-                botonAnalizar.setForeground(blueAzure);
+                botonAnalizar.setBackground(negro28);
+                botonAnalizar.setForeground(azulAzur);
             }
             
             @Override
@@ -516,13 +512,13 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mb14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratNegrita).deriveFont(14f);
                     
                     botonAnalizar.setFont(mb14);
-                    botonAnalizar.setForeground(orangeFeral);
+                    botonAnalizar.setForeground(naranjaFeral);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                botonAnalizar.setBackground(darkJet);
+                botonAnalizar.setBackground(oscuroJet);
                 java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
                 botonAnalizar.setCursor(cursorMano);
             }
@@ -534,13 +530,13 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mr14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratRegular).deriveFont(14f);
                     
                     botonAnalizar.setFont(mr14);
-                    botonAnalizar.setForeground(whitePlatinum);
+                    botonAnalizar.setForeground(blancoPlatino);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                botonAnalizar.setBackground(darkGray);
+                botonAnalizar.setBackground(grisOscuro);
                 java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
                 botonAnalizar.setCursor(cursorPuntero);
             }
@@ -554,8 +550,8 @@ public class FeralCompiler extends javax.swing.JFrame {
             
             @Override
             public void mousePressed(java.awt.event.MouseEvent e) {
-                botonCompilar.setBackground(dark28);
-                botonCompilar.setForeground(blueAzure);
+                botonCompilar.setBackground(negro28);
+                botonCompilar.setForeground(azulAzur);
             }
             
             @Override
@@ -565,13 +561,13 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mb14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratNegrita).deriveFont(14f);
                     
                     botonCompilar.setFont(mb14);
-                    botonCompilar.setForeground(orangeFeral);
+                    botonCompilar.setForeground(naranjaFeral);
                 } catch (FontFormatException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IOException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                botonCompilar.setBackground(darkJet);
+                botonCompilar.setBackground(oscuroJet);
                 java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
                 botonCompilar.setCursor(cursorMano);
             }
@@ -588,12 +584,28 @@ public class FeralCompiler extends javax.swing.JFrame {
                 } catch (IOException ex) {
                     Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                botonCompilar.setBackground(darkGray);
-                botonCompilar.setForeground(whitePlatinum);
+                botonCompilar.setBackground(grisOscuro);
+                botonCompilar.setForeground(blancoPlatino);
                 java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
                 botonCompilar.setCursor(cursorPuntero);
             }
         });
+    }
+    
+    private void personalizarEscritorCodigo() {
+        escritorCodigo.setUI(new javax.swing.plaf.basic.BasicEditorPaneUI());
+        
+        javax.swing.JComponent lineaDeNumerosPanel = crearLineaDeNumeros(escritorCodigo);
+        divisorCodigo.setRowHeaderView(lineaDeNumerosPanel);
+        
+        javax.swing.text.SimpleAttributeSet setAtributos = new javax.swing.text.SimpleAttributeSet();
+        javax.swing.text.StyleConstants.setLeftIndent(setAtributos, 10);
+        javax.swing.text.StyleConstants.setRightIndent(setAtributos, 10);
+        
+        javax.swing.text.StyledDocument doc = escritorCodigo.getStyledDocument();
+        doc.setParagraphAttributes(0, doc.getLength(), setAtributos, false);
+        
+        realizarCuatroTabs(escritorCodigo);
     }
     
     private void personalizarComponentes() {
@@ -606,6 +618,77 @@ public class FeralCompiler extends javax.swing.JFrame {
         importarFuentesAEtiquetas();
         importarFuentesAAreasDeTexto();
         configurarMargenesAAreasDeTexto();
+        personalizarEscritorCodigo();
+    }
+    
+    private static javax.swing.JComponent crearLineaDeNumeros(javax.swing.JTextPane panelDeTexto) {
+        javax.swing.JPanel lineaDeNumeros = new javax.swing.JPanel() {
+            @Override
+            protected void paintComponent(java.awt.Graphics graficos) {
+                super.paintComponent(graficos);
+                graficos.setColor(gris);
+                graficos.setFont(new java.awt.Font("Consolas", java.awt.Font.PLAIN, 14));
+                
+                int altoDeLinea = panelDeTexto.getFontMetrics(panelDeTexto.getFont()).getHeight();
+                int recorridoInicio = panelDeTexto.getInsets().top;
+                int numeroDeLineas = panelDeTexto.getDocument().getDefaultRootElement().getElementCount();
+
+                for (int i = 0; i < numeroDeLineas; i++) {
+                    int posicionEnY = recorridoInicio + (i + 1) * altoDeLinea;
+                    graficos.drawString(String.valueOf(i + 1), 8, posicionEnY);
+                }
+            }
+
+            @Override
+            public java.awt.Dimension getPreferredSize() {
+                return new java.awt.Dimension(35, panelDeTexto.getHeight());
+            }
+        };
+
+        lineaDeNumeros.setBackground(oscuroJet);
+        
+        panelDeTexto.getDocument().addDocumentListener(new javax.swing.event.DocumentListener() {
+            @Override
+            public void insertUpdate(javax.swing.event.DocumentEvent e) {
+                lineaDeNumeros.repaint();
+            }
+
+            @Override
+            public void removeUpdate(javax.swing.event.DocumentEvent e) {
+                lineaDeNumeros.repaint();
+            }
+
+            @Override
+            public void changedUpdate(javax.swing.event.DocumentEvent e) {
+                lineaDeNumeros.repaint();
+            }
+        });
+
+        return lineaDeNumeros;
+    }
+    
+    private static void realizarCuatroTabs(javax.swing.JTextPane panelDeTexto) {
+        panelDeTexto.getInputMap().put(javax.swing.KeyStroke.getKeyStroke("TAB"), "insertSpaces");
+        panelDeTexto.getActionMap().put("insertSpaces", new javax.swing.AbstractAction() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                javax.swing.text.Document documento = panelDeTexto.getDocument();
+                int inicio = panelDeTexto.getSelectionStart();
+                int fin = panelDeTexto.getSelectionEnd();
+                String espacios = "    ";
+
+                try {
+                    if (inicio != fin) {
+                        documento.remove(inicio, fin - inicio);
+                    }
+                    documento.insertString(inicio, espacios, null);
+                } catch (javax.swing.text.BadLocationException ex) {
+                    ex.printStackTrace();
+                }
+                
+                panelDeTexto.setCaretPosition(inicio + 4);
+            }
+        });
     }
     
     @SuppressWarnings("unchecked")
@@ -635,7 +718,7 @@ public class FeralCompiler extends javax.swing.JFrame {
         botonAnalizar = new javax.swing.JLabel();
         botonCompilar = new javax.swing.JLabel();
         divisorCodigo = new javax.swing.JScrollPane();
-        escritorCodigo = new javax.swing.JTextArea();
+        escritorCodigo = new javax.swing.JTextPane();
         lexicoEtiqueta = new javax.swing.JLabel();
         divisorLexico = new javax.swing.JScrollPane();
         salidaLexico = new javax.swing.JTextArea();
@@ -808,9 +891,7 @@ public class FeralCompiler extends javax.swing.JFrame {
 
         divisorPaneles.setLeftComponent(botonesPanel);
 
-        escritorCodigo.setColumns(20);
-        escritorCodigo.setRows(5);
-        escritorCodigo.setTabSize(4);
+        escritorCodigo.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
         divisorCodigo.setViewportView(escritorCodigo);
 
         divisorPaneles.setRightComponent(divisorCodigo);
@@ -835,7 +916,7 @@ public class FeralCompiler extends javax.swing.JFrame {
 
         consolaEtiqueta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         consolaEtiqueta.setForeground(new java.awt.Color(240, 240, 240));
-        consolaEtiqueta.setText("Consola");
+        consolaEtiqueta.setText("Salida");
 
         salidaConsola.setEditable(false);
         salidaConsola.setColumns(20);
@@ -921,7 +1002,7 @@ public class FeralCompiler extends javax.swing.JFrame {
     private javax.swing.JSplitPane divisorPaneles;
     private javax.swing.JScrollPane divisorSintactico;
     private javax.swing.JScrollPane divisorSintactico1;
-    private javax.swing.JTextArea escritorCodigo;
+    private javax.swing.JTextPane escritorCodigo;
     private javax.swing.JLabel lexicoEtiqueta;
     private javax.swing.JLabel mensajeTexto1;
     private javax.swing.JLabel mensajeTexto2;

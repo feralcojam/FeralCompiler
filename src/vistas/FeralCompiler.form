@@ -419,11 +419,11 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="escritorCodigo">
+                <Component class="javax.swing.JTextPane" name="escritorCodigo">
                   <Properties>
-                    <Property name="columns" type="int" value="20"/>
-                    <Property name="rows" type="int" value="5"/>
-                    <Property name="tabSize" type="int" value="4"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Consolas" size="14" style="0"/>
+                    </Property>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -492,7 +492,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f0" green="f0" red="f0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Consola"/>
+            <Property name="text" type="java.lang.String" value="Salida"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="divisorSintactico1">
