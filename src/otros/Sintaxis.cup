@@ -1,0 +1,44 @@
+package otros;
+
+import java_cup.runtime.Symbol;
+
+parser code
+{:
+    private Symbol simboloSintaxis;
+
+    public void errorSintactico(Symbol simboloSintaxis) {
+        this.simboloSintaxis = simboloSintaxis;
+    }
+
+    public Symbol getSimboloSintaxis() {
+        return this.simboloSintaxis;
+    }
+:};
+
+terminal Byte, Short, Int, Long, Float, Double, Boolean, Char, String, 
+    Suma, Resta, Multiplicacion, Division, Modulo, Incremento, Decremento, 
+    Igual, Adicion, Substraccion, IgualA, DiferenteDe, MayorQue, MenorQue, MayorIgual, MenorIgual, 
+    OperadorAND, OperadorOR, OperadorNOT, 
+    ParentesisAbierto, ParentesisCerrado, CorcheteAbierto, CorcheteCerrado, LlaveAbierta, LlaveCerrada, 
+    PuntoYComa, Coma, Punto, DosPuntos, 
+    MetodoMax, MetodoMin, MetodoSqrt, MetodoAbs, MetodoRandom, 
+    If, Else, ElseIf, Switch, Case, Break, Default, While, Do, For, 
+    ArregloByte, ArregloShort, ArregloInt, ArregloLong, ArregloFloat, ArregloDouble, ArregloBoolean, ArregloChar, ArregloString, 
+    ArregloMultByte, ArregloMultShort, ArregloMultInt, ArregloMultLong, ArregloMultFloat, ArregloMultDouble, ArregloMultBoolean, ArregloMultChar, ArregloMultString, 
+    Public, Private, Protected, Final, Abstract, Static, Transient, Syncronized, Volatile, Import, Void, Return, Class, Interface, Enum, Extends, Package, Try, Catch, Finally, New, This, Super, Null, 
+    Identificador, Numero, ContenidoDeString
+;
+
+non terminal Programa, DeclaracionPaquete, DeclaracionImportar, 
+    DeclaracionClase, DeclaracionMetodo, Instruccion, Expresion
+;
+
+start with Programa;
+
+Programa ::= DeclaracionPaquete DeclaracionImportar* DeclaracionClase+;
+
+DeclaracionPaquete ::= Package Identificador PuntoYComa;
+
+DeclaracionImportar ::= Import Identificador Punto Identificador PuntoYComa;
+
+DeclaracionClase ::= Public Class Identifier LlaveAbierta DeclaracionMetodo LlaveCerrada;
