@@ -26,62 +26,84 @@ tipoDato = "byte" | "short" | "int" | "long" | "float" | "double" | "boolean" | 
 %%
 
 {espacioEnBlanco} { }
-{identificador}    
-    { 
-        tokens.add("IDENTIFICADOR: " + yytext()); 
-        return new Symbol(sym.IDENTIFICADOR, yytext()); 
-    }
-{numero}    
-    { 
-        tokens.add("NUMERO: " + yytext()); 
-        return new Symbol(sym.NUMERO, yytext()); 
-    }
 
 /* Tipos de dato */
 "byte"   
     { 
         tokens.add("ENTERO: " + yytext()); 
-        return new Symbol(sym.ENTERO, yytext()); 
+        return new Symbol(sym.ENTERO, yyline, yycolumn); 
     }
 "short"    
     { 
         tokens.add("ENTERO: " + yytext()); 
-        return new Symbol(sym.ENTERO, yytext()); 
+        return new Symbol(sym.ENTERO, yyline, yycolumn); 
     }
 "int"    
     { 
         tokens.add("ENTERO: " + yytext()); 
-        return new Symbol(sym.ENTERO, yytext()); 
+        return new Symbol(sym.ENTERO, yyline, yycolumn); 
     }
 "long"    
     { 
         tokens.add("ENTERO: " + yytext()); 
-        return new Symbol(sym.ENTERO, yytext()); 
+        return new Symbol(sym.ENTERO, yyline, yycolumn); 
     }
 "float"    
     { 
         tokens.add("FLOTANTE: " + yytext()); 
-        return new Symbol(sym.FLOTANTE, yytext()); 
+        return new Symbol(sym.FLOTANTE, yyline, yycolumn); 
     }
 "double"    
     { 
         tokens.add("FLOTANTE: " + yytext()); 
-        return new Symbol(sym.FLOTANTE, yytext()); 
+        return new Symbol(sym.FLOTANTE, yyline, yycolumn); 
     }
 "boolean"    
     { 
         tokens.add("BOOLEANO: " + yytext()); 
-        return new Symbol(sym.BOOLEANO, yytext()); 
+        return new Symbol(sym.BOOLEANO, yyline, yycolumn); 
     }
 "char"    
     { 
         tokens.add("CARACTER: " + yytext()); 
-        return new Symbol(sym.CARACTER, yytext()); 
+        return new Symbol(sym.CARACTER, yyline, yycolumn); 
     }
 "String"    
     { 
         tokens.add("CADENA: " + yytext()); 
-        return new Symbol(sym.CADENA, yytext()); 
+        return new Symbol(sym.CADENA, yyline, yycolumn); 
+    }
+
+/* Valores de tipos */
+{identificador}    
+    { 
+        tokens.add("IDENTIFICADOR: " + yytext()); 
+        return new Symbol(sym.IDENTIFICADOR, yyline, yycolumn, yytext()); 
+    }
+{numero}    
+    { 
+        tokens.add("NUMERO: " + yytext()); 
+        return new Symbol(sym.NUMERO, yyline, yycolumn, Integer.parseInt(yytext())); 
+    }
+[0-9]+\.[0-9]+ 
+    { 
+        tokens.add("NUMERO_FLOTANTE: " + yytext()); 
+        return new Symbol(sym.NUMERO_FLOTANTE, yyline, yycolumn, Float.parseFloat(yytext())); 
+    }
+true|false 
+    {
+        tokens.add("VALOR_BOOLEANO: " + yytext());
+        return new Symbol(sym.VALOR_BOOLEANO, yyline, yycolumn, Boolean.parseBoolean(yytext()));
+    }
+\'[^']\' 
+    {
+        tokens.add("VALOR_CARACTER: " + yytext());
+        return new Symbol(sym.VALOR_CARACTER, yyline, yycolumn, yytext().charAt(1));
+    }
+\"[^\"]*\" 
+    {
+        tokens.add("VALOR_CADENA: " + yytext());
+        return new Symbol(sym.VALOR_CADENA, yyline, yycolumn, yytext().substring(1, yytext().length() - 1));
     }
 
 /* Arreglo y Matriz de tipos de dato */

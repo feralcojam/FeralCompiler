@@ -8,7 +8,7 @@ import sintactico.sym;
 
 
 @SuppressWarnings("fallthrough")
-public class Lexico {
+public class Lexico implements java_cup.runtime.Scanner {
 
   /** This character denotes the end of file. */
   public static final int YYEOF = -1;
@@ -334,7 +334,6 @@ public class Lexico {
   private boolean zzAtBOL = true;
 
   /** Whether the user-EOF-code has already been executed. */
-  @SuppressWarnings("unused")
   private boolean zzEOFDone;
 
   /* user code: */
@@ -603,6 +602,18 @@ public class Lexico {
   }
 
 
+  /**
+   * Contains user EOF-code, which will be executed exactly once,
+   * when the end of file is reached
+   */
+  private void zzDoEOF() throws java.io.IOException {
+    if (!zzEOFDone) {
+      zzEOFDone = true;
+    
+  yyclose();    }
+  }
+
+
 
 
   /**
@@ -612,7 +623,7 @@ public class Lexico {
    * @return the next token.
    * @exception java.io.IOException if any I/O-Error occurs.
    */
-  public Yytoken yylex() throws java.io.IOException
+  @Override  public java_cup.runtime.Symbol next_token() throws java.io.IOException
   {
     int zzInput;
     int zzAction;
@@ -749,7 +760,8 @@ public class Lexico {
 
       if (zzInput == YYEOF && zzStartRead == zzCurrentPos) {
         zzAtEOF = true;
-        return null;
+            zzDoEOF();
+          { return new java_cup.runtime.Symbol(sym.EOF); }
       }
       else {
         switch (zzAction < 0 ? zzAction : ZZ_ACTION[zzAction]) {
