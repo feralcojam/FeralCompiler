@@ -350,7 +350,6 @@ public class Lexico implements java_cup.runtime.Scanner {
   /* user code: */
     private java.util.ArrayList<String> tokens = new java.util.ArrayList<>();
     public java.util.List<String> obtenerTokens() { return tokens; }
-    private String[] tipoDato = { "byte", "short", "int", "long", "float", "double", "boolean", "char", "String" };
 
 
   /**
@@ -788,37 +787,37 @@ public class Lexico implements java_cup.runtime.Scanner {
           case 42: break;
           case 3:
             { tokens.add("OPERADOR_NOT: " + yytext()); 
-        return new Symbol(sym.OPERADOR_NOT, yytext());
+        return new Symbol(sym.OPERADOR_NOT, yyline, yycolumn, yytext());
             }
           // fall through
           case 43: break;
           case 4:
             { tokens.add("OPERADOR: " + yytext()); 
-        return new Symbol(sym.OPERADOR, yytext());
+        return new Symbol(sym.OPERADOR, yyline, yycolumn, yytext());
             }
           // fall through
           case 44: break;
           case 5:
             { tokens.add("PARENTESIS_ABIERTO: " + yytext()); 
-        return new Symbol(sym.PARENTESIS_ABIERTO, yytext());
+        return new Symbol(sym.PARENTESIS_ABIERTO, yyline, yycolumn, yytext());
             }
           // fall through
           case 45: break;
           case 6:
             { tokens.add("PARENTESIS_CERRADO: " + yytext()); 
-        return new Symbol(sym.PARENTESIS_CERRADO, yytext());
+        return new Symbol(sym.PARENTESIS_CERRADO, yyline, yycolumn, yytext());
             }
           // fall through
           case 46: break;
           case 7:
             { tokens.add("SIGNO_COMA: " + yytext()); 
-        return new Symbol(sym.SIGNO_COMA, yytext());
+        return new Symbol(sym.SIGNO_COMA, yyline, yycolumn, yytext());
             }
           // fall through
           case 47: break;
           case 8:
             { tokens.add("SIGNO_PUNTO: " + yytext()); 
-        return new Symbol(sym.SIGNO_PUNTO, yytext());
+        return new Symbol(sym.SIGNO_PUNTO, yyline, yycolumn, yytext());
             }
           // fall through
           case 48: break;
@@ -830,31 +829,31 @@ public class Lexico implements java_cup.runtime.Scanner {
           case 49: break;
           case 10:
             { tokens.add("SIGNO_DOS_PUNTOS: " + yytext()); 
-        return new Symbol(sym.SIGNO_DOS_PUNTOS, yytext());
+        return new Symbol(sym.SIGNO_DOS_PUNTOS, yyline, yycolumn, yytext());
             }
           // fall through
           case 50: break;
           case 11:
             { tokens.add("SIGNO_PUNTO_Y_COMA: " + yytext()); 
-        return new Symbol(sym.SIGNO_PUNTO_Y_COMA, yytext());
+        return new Symbol(sym.SIGNO_PUNTO_Y_COMA, yyline, yycolumn, yytext());
             }
           // fall through
           case 51: break;
           case 12:
             { tokens.add("OPERADOR_MENOR_QUE: " + yytext()); 
-        return new Symbol(sym.OPERADOR_MENOR_QUE, yytext());
+        return new Symbol(sym.OPERADOR_MENOR_QUE, yyline, yycolumn, yytext());
             }
           // fall through
           case 52: break;
           case 13:
             { tokens.add("OPERADOR_DE_ASIGNACION: " + yytext()); 
-        return new Symbol(sym.OPERADOR_DE_ASIGNACION, yytext());
+        return new Symbol(sym.OPERADOR_DE_ASIGNACION, yyline, yycolumn, yytext());
             }
           // fall through
           case 53: break;
           case 14:
             { tokens.add("OPERADOR_MAYOR_QUE: " + yytext()); 
-        return new Symbol(sym.OPERADOR_MAYOR_QUE, yytext());
+        return new Symbol(sym.OPERADOR_MAYOR_QUE, yyline, yycolumn, yytext());
             }
           // fall through
           case 54: break;
@@ -866,31 +865,31 @@ public class Lexico implements java_cup.runtime.Scanner {
           case 55: break;
           case 16:
             { tokens.add("CORCHETE_ABIERTO: " + yytext()); 
-        return new Symbol(sym.CORCHETE_ABIERTO, yytext());
+        return new Symbol(sym.CORCHETE_ABIERTO, yyline, yycolumn, yytext());
             }
           // fall through
           case 56: break;
           case 17:
             { tokens.add("CORCHETE_CERRADO: " + yytext()); 
-        return new Symbol(sym.CORCHETE_CERRADO, yytext());
+        return new Symbol(sym.CORCHETE_CERRADO, yyline, yycolumn, yytext());
             }
           // fall through
           case 57: break;
           case 18:
             { tokens.add("LLAVE_ABIERTA: " + yytext()); 
-        return new Symbol(sym.LLAVE_ABIERTA, yytext());
+        return new Symbol(sym.LLAVE_ABIERTA, yyline, yycolumn, yytext());
             }
           // fall through
           case 58: break;
           case 19:
             { tokens.add("LLAVE_CERRADA: " + yytext()); 
-        return new Symbol(sym.LLAVE_CERRADA, yytext());
+        return new Symbol(sym.LLAVE_CERRADA, yyline, yycolumn, yytext());
             }
           // fall through
           case 59: break;
           case 20:
             { tokens.add("OPERADOR_DIFERENTE_DE: " + yytext()); 
-        return new Symbol(sym.OPERADOR_DIFERENTE_DE, yytext());
+        return new Symbol(sym.OPERADOR_DIFERENTE_DE, yyline, yycolumn, yytext());
             }
           // fall through
           case 60: break;
@@ -902,55 +901,55 @@ public class Lexico implements java_cup.runtime.Scanner {
           case 61: break;
           case 22:
             { tokens.add("OPERADOR_AND: " + yytext()); 
-        return new Symbol(sym.OPERADOR_AND, yytext());
+        return new Symbol(sym.OPERADOR_AND, yyline, yycolumn, yytext());
             }
           // fall through
           case 62: break;
           case 23:
             { tokens.add("OPERADOR_INCREMENTO: " + yytext()); 
-        return new Symbol(sym.OPERADOR_INCREMENTO, yytext());
+        return new Symbol(sym.OPERADOR_INCREMENTO, yyline, yycolumn, yytext());
             }
           // fall through
           case 63: break;
           case 24:
             { tokens.add("OPERADOR_DE_ADICION: " + yytext()); 
-        return new Symbol(sym.OPERADOR_DE_ADICION, yytext());
+        return new Symbol(sym.OPERADOR_DE_ADICION, yyline, yycolumn, yytext());
             }
           // fall through
           case 64: break;
           case 25:
             { tokens.add("OPERADOR_DECREMENTO: " + yytext()); 
-        return new Symbol(sym.OPERADOR_DECREMENTO, yytext());
+        return new Symbol(sym.OPERADOR_DECREMENTO, yyline, yycolumn, yytext());
             }
           // fall through
           case 65: break;
           case 26:
             { tokens.add("OPERADOR_DE_SUSTRACCION: " + yytext()); 
-        return new Symbol(sym.OPERADOR_DE_SUSTRACCION, yytext());
+        return new Symbol(sym.OPERADOR_DE_SUSTRACCION, yyline, yycolumn, yytext());
             }
           // fall through
           case 66: break;
           case 27:
             { tokens.add("OPERADOR_MENOR_IGUAL: " + yytext()); 
-        return new Symbol(sym.OPERADOR_MENOR_IGUAL, yytext());
+        return new Symbol(sym.OPERADOR_MENOR_IGUAL, yyline, yycolumn, yytext());
             }
           // fall through
           case 67: break;
           case 28:
             { tokens.add("OPERADOR_IGUAL_A: " + yytext()); 
-        return new Symbol(sym.OPERADOR_IGUAL_A, yytext());
+        return new Symbol(sym.OPERADOR_IGUAL_A, yyline, yycolumn, yytext());
             }
           // fall through
           case 68: break;
           case 29:
             { tokens.add("OPERADOR_MAYOR_IGUAL: " + yytext()); 
-        return new Symbol(sym.OPERADOR_MAYOR_IGUAL, yytext());
+        return new Symbol(sym.OPERADOR_MAYOR_IGUAL, yyline, yycolumn, yytext());
             }
           // fall through
           case 69: break;
           case 30:
             { tokens.add("OPERADOR_OR: " + yytext()); 
-        return new Symbol(sym.OPERADOR_OR, yytext());
+        return new Symbol(sym.OPERADOR_OR, yyline, yycolumn, yytext());
             }
           // fall through
           case 70: break;
@@ -986,7 +985,7 @@ public class Lexico implements java_cup.runtime.Scanner {
           case 75: break;
           case 36:
             { tokens.add("ARREGLO: " + yytext());
-    return new Symbol(sym.ARREGLO, yytext());
+    return new Symbol(sym.ARREGLO, yyline, yycolumn, yytext());
             }
           // fall through
           case 76: break;
@@ -998,7 +997,7 @@ public class Lexico implements java_cup.runtime.Scanner {
           case 77: break;
           case 38:
             { tokens.add("MATRIZ: " + yytext());
-    return new Symbol(sym.MATRIZ, yytext());
+    return new Symbol(sym.MATRIZ, yyline, yycolumn, yytext());
             }
           // fall through
           case 78: break;
@@ -1010,7 +1009,7 @@ public class Lexico implements java_cup.runtime.Scanner {
           case 79: break;
           case 40:
             { tokens.add("SENTENCIA_ELSE_IF: " + yytext()); 
-        return new Symbol(sym.SENTENCIA_ELSE_IF, yytext());
+        return new Symbol(sym.SENTENCIA_ELSE_IF, yyline, yycolumn, yytext());
             }
           // fall through
           case 80: break;

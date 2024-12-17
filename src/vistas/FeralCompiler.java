@@ -1,7 +1,7 @@
 package vistas;
 
 public class FeralCompiler extends javax.swing.JFrame {
-
+    
     private static java.awt.Color negro28 = new java.awt.Color(28, 28, 28);
     private static java.awt.Color grisOscuro = new java.awt.Color(34, 34, 34);
     private static java.awt.Color oscuroJet = new java.awt.Color(54, 54, 54);
@@ -16,6 +16,13 @@ public class FeralCompiler extends javax.swing.JFrame {
         initComponents();
         personalizarBarraDeNavegacion();
         personalizarComponentes();
+        cargarLexico();
+    }
+    
+    
+    
+    private void cargarLexico() {
+        
     }
 
     private void cerrarVentana() {
@@ -465,7 +472,7 @@ public class FeralCompiler extends javax.swing.JFrame {
         botonAnalizar.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e) {
-                // accion de analizar
+                // codigo
             }
             
             @Override

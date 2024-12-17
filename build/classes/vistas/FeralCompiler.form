@@ -190,7 +190,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="botonAbrir" alignment="0" max="32767" attributes="0"/>
-                      <Component id="botonGuardar" alignment="0" pref="200" max="32767" attributes="0"/>
+                      <Component id="botonGuardar" alignment="0" max="32767" attributes="0"/>
                       <Component id="botonGuardarComo" alignment="0" max="32767" attributes="0"/>
                       <Component id="botonEliminar" alignment="0" max="32767" attributes="0"/>
                       <Component id="botonAnalizar" alignment="0" max="32767" attributes="0"/>

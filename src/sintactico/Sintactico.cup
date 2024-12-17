@@ -32,6 +32,8 @@ terminal IDENTIFICADOR, NUMERO, ENTERO, FLOTANTE, BOOLEANO, CARACTER, CADENA,
 non terminal programa;
 non terminal metodoMain;
 non terminal codigo;
+non terminal declaracionInicializada;
+non terminal declaracion;
 
 programa ::= clase;
 
@@ -47,3 +49,23 @@ metodoMain ::=
     LLAVE_ABIERTA codigo LLAVE_CERRADA
 ;
 codigo ::=
+    /* Declaraciones de variables y constantes */
+    declaracionInicializada
+    | declaracion
+;
+declaracionInicializada ::=
+    ENTERO IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO SIGNO_PUNTO_Y_COMA
+    | FLOTANTE IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO_FLOTANTE SIGNO_PUNTO_Y_COMA
+    | BOOLEANO IDENTIFICADOR OPERADOR_DE_ASIGNACION VALOR_BOOLEANO SIGNO_PUNTO_Y_COMA
+    | CARACTER IDENTIFICADOR OPERADOR_DE_ASIGNACION VALOR_CARACTER SIGNO_PUNTO_Y_COMA
+    | CADENA IDENTIFICADOR OPERADOR_DE_ASIGNACION VALOR_CADENA SIGNO_PUNTO_Y_COMA
+    /* Hay que añadir declaración de arreglos y matrices de cada tipo
+;
+declaracion ::=
+    ENTERO IDENTIFICADOR SIGNO_PUNTO_Y_COMA
+    | FLOTANTE IDENTIFICADOR SIGNO_PUNTO_Y_COMA
+    | BOOLEANO IDENTIFICADOR SIGNO_PUNTO_Y_COMA
+    | CARACTER IDENTIFICADOR SIGNO_PUNTO_Y_COMA
+    | CADENA IDENTIFICADOR SIGNO_PUNTO_Y_COMA
+    /* Hay que añadir declaración de arreglos y matrices de cada tipo
+;
