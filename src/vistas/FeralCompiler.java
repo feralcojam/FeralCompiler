@@ -1,10 +1,5 @@
 package vistas;
 
-import java.awt.FontFormatException;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 public class FeralCompiler extends javax.swing.JFrame {
 
     private static java.awt.Color negro28 = new java.awt.Color(28, 28, 28);
@@ -198,10 +193,8 @@ public class FeralCompiler extends javax.swing.JFrame {
             botonAnalizar.setFont(mr14);
             botonCompilar.setFont(mr14);
             
-        } catch (FontFormatException ex) {
-            Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (java.awt.FontFormatException | java.io.IOException ex) {
+            java.util.logging.Logger.getLogger(FeralCompiler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
     }
     
@@ -224,10 +217,8 @@ public class FeralCompiler extends javax.swing.JFrame {
             sintacticoEtiqueta.setFont(mb14);
             consolaEtiqueta.setFont(mb14);
             
-        } catch (FontFormatException ex) {
-            Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (java.awt.FontFormatException | java.io.IOException ex) {
+            java.util.logging.Logger.getLogger(FeralCompiler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
     }
     
@@ -240,10 +231,8 @@ public class FeralCompiler extends javax.swing.JFrame {
             salidaSintactico.setFont(cr12);
             salidaConsola.setFont(cr12);
             
-        } catch (FontFormatException ex) {
-            Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (java.awt.FontFormatException | java.io.IOException ex) {
+            java.util.logging.Logger.getLogger(FeralCompiler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
     }
     
@@ -268,10 +257,8 @@ public class FeralCompiler extends javax.swing.JFrame {
                     
                     botonAbrir.setFont(mb14);
                     botonAbrir.setForeground(naranjaFeral);
-                } catch (FontFormatException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (java.awt.FontFormatException | java.io.IOException ex) {
+                    java.util.logging.Logger.getLogger(FeralCompiler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
                 botonAbrir.setBackground(oscuroJet);
                 java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
@@ -285,10 +272,8 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mr14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratRegular).deriveFont(14f);
                     
                     botonAbrir.setFont(mr14);
-                } catch (FontFormatException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (java.awt.FontFormatException | java.io.IOException ex) {
+                    java.util.logging.Logger.getLogger(FeralCompiler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
                 botonAbrir.setBackground(grisOscuro);
                 botonAbrir.setForeground(blancoPlatino);
@@ -317,10 +302,8 @@ public class FeralCompiler extends javax.swing.JFrame {
                     
                     botonGuardar.setFont(mb14);
                     botonGuardar.setForeground(naranjaFeral);
-                } catch (FontFormatException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (java.awt.FontFormatException | java.io.IOException ex) {
+                    java.util.logging.Logger.getLogger(FeralCompiler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
                 botonGuardar.setBackground(oscuroJet);
                 java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
@@ -335,10 +318,8 @@ public class FeralCompiler extends javax.swing.JFrame {
                     
                     botonGuardar.setFont(mr14);
                     botonGuardar.setForeground(blancoPlatino);
-                } catch (FontFormatException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (java.awt.FontFormatException | java.io.IOException ex) {
+                    java.util.logging.Logger.getLogger(FeralCompiler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
                 botonGuardar.setBackground(grisOscuro);
                 java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
@@ -366,10 +347,8 @@ public class FeralCompiler extends javax.swing.JFrame {
                     
                     botonGuardarComo.setFont(mb14);
                     botonGuardarComo.setForeground(naranjaFeral);
-                } catch (FontFormatException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (java.awt.FontFormatException | java.io.IOException ex) {
+                    java.util.logging.Logger.getLogger(FeralCompiler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
                 botonGuardarComo.setBackground(oscuroJet);
                 java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
@@ -384,10 +363,8 @@ public class FeralCompiler extends javax.swing.JFrame {
                     
                     botonGuardarComo.setFont(mr14);
                     botonGuardarComo.setForeground(blancoPlatino);
-                } catch (FontFormatException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (java.awt.FontFormatException | java.io.IOException ex) {
+                    java.util.logging.Logger.getLogger(FeralCompiler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
                 botonGuardarComo.setBackground(grisOscuro);
                 java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
@@ -415,10 +392,8 @@ public class FeralCompiler extends javax.swing.JFrame {
                     
                     botonEliminar.setFont(mb14);
                     botonEliminar.setForeground(naranjaFeral);
-                } catch (FontFormatException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (java.awt.FontFormatException | java.io.IOException ex) {
+                    java.util.logging.Logger.getLogger(FeralCompiler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
                 botonEliminar.setBackground(oscuroJet);
                 java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
@@ -433,10 +408,8 @@ public class FeralCompiler extends javax.swing.JFrame {
                     
                     botonEliminar.setFont(mr14);
                     botonEliminar.setForeground(blancoPlatino);
-                } catch (FontFormatException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (java.awt.FontFormatException | java.io.IOException ex) {
+                    java.util.logging.Logger.getLogger(FeralCompiler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
                 botonEliminar.setBackground(grisOscuro);
                 java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
@@ -464,10 +437,8 @@ public class FeralCompiler extends javax.swing.JFrame {
                     
                     botonLimpiar.setFont(mb14);
                     botonLimpiar.setForeground(naranjaFeral);
-                } catch (FontFormatException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (java.awt.FontFormatException | java.io.IOException ex) {
+                    java.util.logging.Logger.getLogger(FeralCompiler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
                 botonLimpiar.setBackground(oscuroJet);
                 java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
@@ -482,10 +453,8 @@ public class FeralCompiler extends javax.swing.JFrame {
                     
                     botonLimpiar.setFont(mr14);
                     botonLimpiar.setForeground(blancoPlatino);
-                } catch (FontFormatException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (java.awt.FontFormatException | java.io.IOException ex) {
+                    java.util.logging.Logger.getLogger(FeralCompiler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
                 botonLimpiar.setBackground(grisOscuro);
                 java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
@@ -513,10 +482,8 @@ public class FeralCompiler extends javax.swing.JFrame {
                     
                     botonAnalizar.setFont(mb14);
                     botonAnalizar.setForeground(naranjaFeral);
-                } catch (FontFormatException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (java.awt.FontFormatException | java.io.IOException ex) {
+                    java.util.logging.Logger.getLogger(FeralCompiler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
                 botonAnalizar.setBackground(oscuroJet);
                 java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
@@ -531,10 +498,8 @@ public class FeralCompiler extends javax.swing.JFrame {
                     
                     botonAnalizar.setFont(mr14);
                     botonAnalizar.setForeground(blancoPlatino);
-                } catch (FontFormatException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (java.awt.FontFormatException | java.io.IOException ex) {
+                    java.util.logging.Logger.getLogger(FeralCompiler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
                 botonAnalizar.setBackground(grisOscuro);
                 java.awt.Cursor cursorPuntero = new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR);
@@ -562,10 +527,8 @@ public class FeralCompiler extends javax.swing.JFrame {
                     
                     botonCompilar.setFont(mb14);
                     botonCompilar.setForeground(naranjaFeral);
-                } catch (FontFormatException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (java.awt.FontFormatException | java.io.IOException ex) {
+                    java.util.logging.Logger.getLogger(FeralCompiler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
                 botonCompilar.setBackground(oscuroJet);
                 java.awt.Cursor cursorMano = new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR);
@@ -579,10 +542,8 @@ public class FeralCompiler extends javax.swing.JFrame {
                     java.awt.Font mr14 = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, montserratRegular).deriveFont(14f);
                     
                     botonCompilar.setFont(mr14);
-                } catch (FontFormatException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(FeralCompiler.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (java.awt.FontFormatException | java.io.IOException ex) {
+                    java.util.logging.Logger.getLogger(FeralCompiler.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
                 botonCompilar.setBackground(grisOscuro);
                 botonCompilar.setForeground(blancoPlatino);
