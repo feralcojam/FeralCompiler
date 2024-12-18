@@ -31,8 +31,26 @@ public class Sintactico extends java_cup.runtime.lr_parser {
   /** Production table. */
   protected static final short _production_table[][] = 
     unpackFromStrings(new String[] {
-    "\000\004\000\002\002\010\000\002\002\004\000\002\003" +
-    "\015\000\002\004\007" });
+    "\000\077\000\002\002\003\000\002\002\004\000\002\003" +
+    "\010\000\002\003\010\000\002\003\010\000\002\003\007" +
+    "\000\002\004\015\000\002\005\003\000\002\005\003\000" +
+    "\002\006\007\000\002\006\007\000\002\006\007\000\002" +
+    "\006\007\000\002\006\007\000\002\006\007\000\002\006" +
+    "\007\000\002\006\007\000\002\006\007\000\002\006\007" +
+    "\000\002\006\007\000\002\006\007\000\002\006\007\000" +
+    "\002\006\007\000\002\006\007\000\002\006\007\000\002" +
+    "\006\007\000\002\006\007\000\002\006\007\000\002\006" +
+    "\007\000\002\006\007\000\002\006\007\000\002\006\007" +
+    "\000\002\006\007\000\002\006\007\000\002\006\007\000" +
+    "\002\006\007\000\002\007\005\000\002\007\005\000\002" +
+    "\007\005\000\002\007\005\000\002\007\005\000\002\007" +
+    "\005\000\002\007\005\000\002\007\005\000\002\007\005" +
+    "\000\002\007\005\000\002\007\005\000\002\007\005\000" +
+    "\002\007\005\000\002\007\005\000\002\007\005\000\002" +
+    "\007\005\000\002\007\005\000\002\007\005\000\002\007" +
+    "\005\000\002\007\005\000\002\007\005\000\002\007\005" +
+    "\000\002\007\005\000\002\007\005\000\002\007\005\000" +
+    "\002\007\005\000\002\007\005" });
 
   /** Access to production table. */
   public short[][] production_table() {return _production_table;}
@@ -40,18 +58,109 @@ public class Sintactico extends java_cup.runtime.lr_parser {
   /** Parse-action table. */
   protected static final short[][] _action_table = 
     unpackFromStrings(new String[] {
-    "\000\031\000\004\053\004\001\002\000\004\060\007\001" +
-    "\002\000\004\002\006\001\002\000\004\002\000\001\002" +
-    "\000\004\004\010\001\002\000\004\075\011\001\002\000" +
-    "\004\053\012\001\002\000\004\057\015\001\002\000\004" +
-    "\076\014\001\002\000\004\002\001\001\002\000\004\061" +
-    "\016\001\002\000\004\004\017\001\002\000\004\071\020" +
-    "\001\002\000\004\017\021\001\002\000\004\004\022\001" +
-    "\002\000\004\072\023\001\002\000\004\075\024\001\002" +
-    "\000\004\006\026\001\002\000\004\076\033\001\002\000" +
-    "\004\004\027\001\002\000\004\024\030\001\002\000\004" +
-    "\005\031\001\002\000\004\067\032\001\002\000\004\076" +
-    "\ufffe\001\002\000\004\076\uffff\001\002" });
+    "\000\312\000\012\104\004\105\006\106\007\111\010\001" +
+    "\002\000\004\111\310\001\002\000\004\002\307\001\002" +
+    "\000\004\111\302\001\002\000\004\111\275\001\002\000" +
+    "\004\015\012\001\002\000\004\002\001\001\002\000\004" +
+    "\126\013\001\002\000\004\104\014\001\002\000\004\110" +
+    "\017\001\002\000\004\127\016\001\002\000\004\002\ufffc" +
+    "\001\002\000\004\112\020\001\002\000\004\015\021\001" +
+    "\002\000\004\122\022\001\002\000\004\034\023\001\002" +
+    "\000\004\015\024\001\002\000\004\123\025\001\002\000" +
+    "\004\126\026\001\002\000\070\004\034\005\057\006\033" +
+    "\007\027\010\054\011\064\012\043\013\046\014\050\024" +
+    "\047\025\060\026\062\027\041\030\055\031\042\032\051" +
+    "\033\056\034\044\035\031\036\052\037\053\040\061\041" +
+    "\036\042\037\043\063\044\030\045\040\001\002\000\004" +
+    "\015\270\001\002\000\004\015\263\001\002\000\004\015" +
+    "\256\001\002\000\004\127\ufffa\001\002\000\004\015\251" +
+    "\001\002\000\004\015\244\001\002\000\004\127\243\001" +
+    "\002\000\004\015\236\001\002\000\004\015\231\001\002" +
+    "\000\004\015\224\001\002\000\004\015\217\001\002\000" +
+    "\004\015\212\001\002\000\004\015\205\001\002\000\004" +
+    "\015\200\001\002\000\004\127\ufff9\001\002\000\004\015" +
+    "\173\001\002\000\004\015\166\001\002\000\004\015\161" +
+    "\001\002\000\004\015\154\001\002\000\004\015\147\001" +
+    "\002\000\004\015\142\001\002\000\004\015\135\001\002" +
+    "\000\004\015\130\001\002\000\004\015\123\001\002\000" +
+    "\004\015\116\001\002\000\004\015\111\001\002\000\004" +
+    "\015\104\001\002\000\004\015\077\001\002\000\004\015" +
+    "\072\001\002\000\004\015\065\001\002\000\006\055\067" +
+    "\120\066\001\002\000\004\127\uffd8\001\002\000\004\020" +
+    "\070\001\002\000\004\120\071\001\002\000\004\127\ufff3" +
+    "\001\002\000\006\055\074\120\073\001\002\000\004\127" +
+    "\uffc5\001\002\000\004\021\075\001\002\000\004\120\076" +
+    "\001\002\000\004\127\uffe0\001\002\000\006\055\101\120" +
+    "\100\001\002\000\004\127\uffd2\001\002\000\004\016\102" +
+    "\001\002\000\004\120\103\001\002\000\004\127\uffed\001" +
+    "\002\000\006\055\106\120\105\001\002\000\004\127\uffc8" +
+    "\001\002\000\004\016\107\001\002\000\004\120\110\001" +
+    "\002\000\004\127\uffe3\001\002\000\006\055\113\120\112" +
+    "\001\002\000\004\127\uffd3\001\002\000\004\016\114\001" +
+    "\002\000\004\120\115\001\002\000\004\127\uffee\001\002" +
+    "\000\006\055\120\120\117\001\002\000\004\127\uffdc\001" +
+    "\002\000\004\016\121\001\002\000\004\120\122\001\002" +
+    "\000\004\127\ufff7\001\002\000\006\055\125\120\124\001" +
+    "\002\000\004\127\uffcd\001\002\000\004\022\126\001\002" +
+    "\000\004\120\127\001\002\000\004\127\uffe8\001\002\000" +
+    "\006\055\132\120\131\001\002\000\004\127\uffd0\001\002" +
+    "\000\004\017\133\001\002\000\004\120\134\001\002\000" +
+    "\004\127\uffeb\001\002\000\006\055\137\120\136\001\002" +
+    "\000\004\127\uffd9\001\002\000\004\017\140\001\002\000" +
+    "\004\120\141\001\002\000\004\127\ufff4\001\002\000\006" +
+    "\055\144\120\143\001\002\000\004\127\uffc9\001\002\000" +
+    "\004\016\145\001\002\000\004\120\146\001\002\000\004" +
+    "\127\uffe4\001\002\000\006\055\151\120\150\001\002\000" +
+    "\004\127\uffca\001\002\000\004\016\152\001\002\000\004" +
+    "\120\153\001\002\000\004\127\uffe5\001\002\000\006\055" +
+    "\156\120\155\001\002\000\004\127\uffce\001\002\000\004" +
+    "\021\157\001\002\000\004\120\160\001\002\000\004\127" +
+    "\uffe9\001\002\000\006\055\163\120\162\001\002\000\004" +
+    "\127\uffd5\001\002\000\004\023\164\001\002\000\004\120" +
+    "\165\001\002\000\004\127\ufff0\001\002\000\006\055\170" +
+    "\120\167\001\002\000\004\127\uffd4\001\002\000\004\016" +
+    "\171\001\002\000\004\120\172\001\002\000\004\127\uffef" +
+    "\001\002\000\006\055\175\120\174\001\002\000\004\127" +
+    "\uffd6\001\002\000\004\022\176\001\002\000\004\120\177" +
+    "\001\002\000\004\127\ufff1\001\002\000\006\055\202\120" +
+    "\201\001\002\000\004\127\uffcc\001\002\000\004\023\203" +
+    "\001\002\000\004\120\204\001\002\000\004\127\uffe7\001" +
+    "\002\000\006\055\207\120\206\001\002\000\004\127\uffd7" +
+    "\001\002\000\004\021\210\001\002\000\004\120\211\001" +
+    "\002\000\004\127\ufff2\001\002\000\006\055\214\120\213" +
+    "\001\002\000\004\127\uffcf\001\002\000\004\020\215\001" +
+    "\002\000\004\120\216\001\002\000\004\127\uffea\001\002" +
+    "\000\006\055\221\120\220\001\002\000\004\127\uffd1\001" +
+    "\002\000\004\016\222\001\002\000\004\120\223\001\002" +
+    "\000\004\127\uffec\001\002\000\006\055\226\120\225\001" +
+    "\002\000\004\127\uffc3\001\002\000\004\023\227\001\002" +
+    "\000\004\120\230\001\002\000\004\127\uffde\001\002\000" +
+    "\006\055\233\120\232\001\002\000\004\127\uffc6\001\002" +
+    "\000\004\020\234\001\002\000\004\120\235\001\002\000" +
+    "\004\127\uffe1\001\002\000\006\055\240\120\237\001\002" +
+    "\000\004\127\uffc7\001\002\000\004\017\241\001\002\000" +
+    "\004\120\242\001\002\000\004\127\uffe2\001\002\000\004" +
+    "\127\ufffb\001\002\000\006\055\246\120\245\001\002\000" +
+    "\004\127\uffdd\001\002\000\004\016\247\001\002\000\004" +
+    "\120\250\001\002\000\004\127\ufff8\001\002\000\006\055" +
+    "\253\120\252\001\002\000\004\127\uffdb\001\002\000\004" +
+    "\016\254\001\002\000\004\120\255\001\002\000\004\127" +
+    "\ufff6\001\002\000\006\055\260\120\257\001\002\000\004" +
+    "\127\uffcb\001\002\000\004\016\261\001\002\000\004\120" +
+    "\262\001\002\000\004\127\uffe6\001\002\000\006\055\265" +
+    "\120\264\001\002\000\004\127\uffc4\001\002\000\004\022" +
+    "\266\001\002\000\004\120\267\001\002\000\004\127\uffdf" +
+    "\001\002\000\006\055\272\120\271\001\002\000\004\127" +
+    "\uffda\001\002\000\004\016\273\001\002\000\004\120\274" +
+    "\001\002\000\004\127\ufff5\001\002\000\004\015\276\001" +
+    "\002\000\004\126\277\001\002\000\004\104\014\001\002" +
+    "\000\004\127\301\001\002\000\004\002\ufffd\001\002\000" +
+    "\004\015\303\001\002\000\004\126\304\001\002\000\004" +
+    "\104\014\001\002\000\004\127\306\001\002\000\004\002" +
+    "\ufffe\001\002\000\004\002\000\001\002\000\004\015\311" +
+    "\001\002\000\004\126\312\001\002\000\004\104\014\001" +
+    "\002\000\004\127\314\001\002\000\004\002\uffff\001\002" +
+    "" });
 
   /** Access to parse-action table. */
   public short[][] action_table() {return _action_table;}
@@ -59,15 +168,70 @@ public class Sintactico extends java_cup.runtime.lr_parser {
   /** <code>reduce_goto</code> table. */
   protected static final short[][] _reduce_table = 
     unpackFromStrings(new String[] {
-    "\000\031\000\004\002\004\001\001\000\002\001\001\000" +
+    "\000\312\000\006\002\004\003\010\001\001\000\002\001" +
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
+    "\004\004\014\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
     "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
-    "\001\001\000\004\003\012\001\001\000\002\001\001\000" +
-    "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
-    "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
-    "\001\000\002\001\001\000\002\001\001\000\004\004\024" +
+    "\001\001\000\002\001\001\000\010\005\034\006\031\007" +
+    "\044\001\001\000\002\001\001\000\002\001\001\000\002" +
     "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
     "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
-    "\000\002\001\001" });
+    "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
+    "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
+    "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
+    "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
+    "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
+    "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
+    "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
+    "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
+    "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
+    "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
+    "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
+    "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
+    "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
+    "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
+    "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
+    "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
+    "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
+    "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
+    "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
+    "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
+    "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
+    "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
+    "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
+    "\002\001\001\000\002\001\001\000\002\001\001\000\002" +
+    "\001\001\000\002\001\001\000\002\001\001\000\002\001" +
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\002\001\001\000" +
+    "\004\004\277\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\004\004\304\001" +
+    "\001\000\002\001\001\000\002\001\001\000\002\001\001" +
+    "\000\002\001\001\000\002\001\001\000\004\004\312\001" +
+    "\001\000\002\001\001\000\002\001\001" });
 
   /** Access to <code>reduce_goto</code> table. */
   public short[][] reduce_table() {return _reduce_table;}
@@ -142,11 +306,11 @@ class CUP$Sintactico$actions {
       switch (CUP$Sintactico$act_num)
         {
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 0: // programa ::= RESERVADA_PUBLIC RESERVADA_CLASS IDENTIFICADOR LLAVE_ABIERTA declaracion LLAVE_CERRADA 
+          case 0: // programa ::= clase 
             {
               Object RESULT =null;
 
-              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("programa",0, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-5)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("programa",0, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
             }
           return CUP$Sintactico$result;
 
@@ -165,20 +329,551 @@ class CUP$Sintactico$actions {
           return CUP$Sintactico$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 2: // declaracion ::= RESERVADA_PUBLIC RESERVADA_STATIC RESERVADA_VOID IDENTIFICADOR PARENTESIS_ABIERTO ARREGLO IDENTIFICADOR PARENTESIS_CERRADO LLAVE_ABIERTA codigo LLAVE_CERRADA 
+          case 2: // clase ::= RESERVADA_PUBLIC RESERVADA_CLASS IDENTIFICADOR LLAVE_ABIERTA metodoMain LLAVE_CERRADA 
             {
               Object RESULT =null;
 
-              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",1, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-10)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("clase",1, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-5)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
             }
           return CUP$Sintactico$result;
 
           /*. . . . . . . . . . . . . . . . . . . .*/
-          case 3: // codigo ::= ENTERO IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO SIGNO_PUNTO_Y_COMA 
+          case 3: // clase ::= RESERVADA_PRIVATE RESERVADA_CLASS IDENTIFICADOR LLAVE_ABIERTA metodoMain LLAVE_CERRADA 
             {
               Object RESULT =null;
 
-              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("codigo",2, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("clase",1, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-5)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 4: // clase ::= RESERVADA_PROTECTED RESERVADA_CLASS IDENTIFICADOR LLAVE_ABIERTA metodoMain LLAVE_CERRADA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("clase",1, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-5)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 5: // clase ::= RESERVADA_CLASS IDENTIFICADOR LLAVE_ABIERTA metodoMain LLAVE_CERRADA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("clase",1, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 6: // metodoMain ::= RESERVADA_PUBLIC RESERVADA_STATIC RESERVADA_VOID IDENTIFICADOR PARENTESIS_ABIERTO ARREGLO_STRING IDENTIFICADOR PARENTESIS_CERRADO LLAVE_ABIERTA codigo LLAVE_CERRADA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("metodoMain",2, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-10)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 7: // codigo ::= declaracionInicializada 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("codigo",3, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 8: // codigo ::= declaracion 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("codigo",3, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 9: // declaracionInicializada ::= BYTE IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 10: // declaracionInicializada ::= SHORT IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 11: // declaracionInicializada ::= INT IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 12: // declaracionInicializada ::= LONG IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 13: // declaracionInicializada ::= FLOAT IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO_FLOTANTE SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 14: // declaracionInicializada ::= DOUBLE IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO_DOUBLE SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 15: // declaracionInicializada ::= BOOLEANO IDENTIFICADOR OPERADOR_DE_ASIGNACION VALOR_BOOLEANO SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 16: // declaracionInicializada ::= CARACTER IDENTIFICADOR OPERADOR_DE_ASIGNACION VALOR_CARACTER SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 17: // declaracionInicializada ::= STRING IDENTIFICADOR OPERADOR_DE_ASIGNACION CADENA SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 18: // declaracionInicializada ::= ARREGLO_BYTE IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 19: // declaracionInicializada ::= ARREGLO_SHORT IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 20: // declaracionInicializada ::= ARREGLO_INT IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 21: // declaracionInicializada ::= ARREGLO_LONG IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 22: // declaracionInicializada ::= ARREGLO_FLOAT IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO_FLOTANTE SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 23: // declaracionInicializada ::= ARREGLO_DOUBLE IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO_DOUBLE SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 24: // declaracionInicializada ::= ARREGLO_BOOLEANO IDENTIFICADOR OPERADOR_DE_ASIGNACION VALOR_BOOLEANO SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 25: // declaracionInicializada ::= ARREGLO_CARACTER IDENTIFICADOR OPERADOR_DE_ASIGNACION VALOR_CARACTER SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 26: // declaracionInicializada ::= ARREGLO_STRING IDENTIFICADOR OPERADOR_DE_ASIGNACION CADENA SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 27: // declaracionInicializada ::= MATRIZ_BYTE IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 28: // declaracionInicializada ::= MATRIZ_SHORT IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 29: // declaracionInicializada ::= MATRIZ_INT IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 30: // declaracionInicializada ::= MATRIZ_LONG IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 31: // declaracionInicializada ::= MATRIZ_FLOAT IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO_FLOTANTE SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 32: // declaracionInicializada ::= MATRIZ_DOUBLE IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO_DOUBLE SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 33: // declaracionInicializada ::= MATRIZ_BOOLEANO IDENTIFICADOR OPERADOR_DE_ASIGNACION VALOR_BOOLEANO SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 34: // declaracionInicializada ::= MATRIZ_CARACTER IDENTIFICADOR OPERADOR_DE_ASIGNACION VALOR_CARACTER SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 35: // declaracionInicializada ::= MATRIZ_STRING IDENTIFICADOR OPERADOR_DE_ASIGNACION CADENA SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracionInicializada",4, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-4)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 36: // declaracion ::= BYTE IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 37: // declaracion ::= SHORT IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 38: // declaracion ::= INT IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 39: // declaracion ::= LONG IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 40: // declaracion ::= FLOAT IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 41: // declaracion ::= DOUBLE IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 42: // declaracion ::= BOOLEANO IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 43: // declaracion ::= CARACTER IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 44: // declaracion ::= STRING IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 45: // declaracion ::= ARREGLO_BYTE IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 46: // declaracion ::= ARREGLO_SHORT IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 47: // declaracion ::= ARREGLO_INT IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 48: // declaracion ::= ARREGLO_LONG IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 49: // declaracion ::= ARREGLO_FLOAT IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 50: // declaracion ::= ARREGLO_DOUBLE IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 51: // declaracion ::= ARREGLO_BOOLEANO IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 52: // declaracion ::= ARREGLO_CARACTER IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 53: // declaracion ::= ARREGLO_STRING IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 54: // declaracion ::= MATRIZ_BYTE IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 55: // declaracion ::= MATRIZ_SHORT IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 56: // declaracion ::= MATRIZ_INT IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 57: // declaracion ::= MATRIZ_LONG IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 58: // declaracion ::= MATRIZ_FLOAT IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 59: // declaracion ::= MATRIZ_DOUBLE IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 60: // declaracion ::= MATRIZ_BOOLEANO IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 61: // declaracion ::= MATRIZ_CARACTER IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
+            }
+          return CUP$Sintactico$result;
+
+          /*. . . . . . . . . . . . . . . . . . . .*/
+          case 62: // declaracion ::= MATRIZ_STRING IDENTIFICADOR SIGNO_PUNTO_Y_COMA 
+            {
+              Object RESULT =null;
+
+              CUP$Sintactico$result = parser.getSymbolFactory().newSymbol("declaracion",5, ((java_cup.runtime.Symbol)CUP$Sintactico$stack.elementAt(CUP$Sintactico$top-2)), ((java_cup.runtime.Symbol)CUP$Sintactico$stack.peek()), RESULT);
             }
           return CUP$Sintactico$result;
 

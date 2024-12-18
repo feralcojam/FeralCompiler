@@ -20,7 +20,10 @@ saltoDeLinea = \r|\n|\r\n
 espacioEnBlanco = {saltoDeLinea} | [ \t\f]
 identificador = [a-zA-Z_][a-zA-Z_0-9]*
 numero = [0-9]+
-tipoDato = "byte" | "short" | "int" | "long" | "float" | "double" | "boolean" | "char" | "String"
+numeroFlotante = [0-9]+\.[0-9]+
+numeroDouble = [0-9]+\.[0-9]+([eE][+-]?[0-9]+)?
+caracter = \'[^']\'
+cadena = \"[^\"]*\"
 
 %%
 
@@ -29,33 +32,33 @@ tipoDato = "byte" | "short" | "int" | "long" | "float" | "double" | "boolean" | 
 /* Tipos de dato */
 "byte"   
     { 
-        tokens.add("ENTERO: " + yytext()); 
-        return new Symbol(sym.ENTERO, yyline, yycolumn); 
+        tokens.add("BYTE: " + yytext()); 
+        return new Symbol(sym.BYTE, yyline, yycolumn); 
     }
 "short"    
     { 
-        tokens.add("ENTERO: " + yytext()); 
-        return new Symbol(sym.ENTERO, yyline, yycolumn); 
+        tokens.add("SHORT: " + yytext()); 
+        return new Symbol(sym.SHORT, yyline, yycolumn); 
     }
 "int"    
     { 
-        tokens.add("ENTERO: " + yytext()); 
-        return new Symbol(sym.ENTERO, yyline, yycolumn); 
+        tokens.add("INT: " + yytext()); 
+        return new Symbol(sym.INT, yyline, yycolumn); 
     }
 "long"    
     { 
-        tokens.add("ENTERO: " + yytext()); 
-        return new Symbol(sym.ENTERO, yyline, yycolumn); 
+        tokens.add("LONG: " + yytext()); 
+        return new Symbol(sym.LONG, yyline, yycolumn); 
     }
 "float"    
     { 
-        tokens.add("FLOTANTE: " + yytext()); 
-        return new Symbol(sym.FLOTANTE, yyline, yycolumn); 
+        tokens.add("FLOAT: " + yytext()); 
+        return new Symbol(sym.FLOAT, yyline, yycolumn); 
     }
 "double"    
     { 
-        tokens.add("FLOTANTE: " + yytext()); 
-        return new Symbol(sym.FLOTANTE, yyline, yycolumn); 
+        tokens.add("DOUBLE: " + yytext()); 
+        return new Symbol(sym.DOUBLE, yyline, yycolumn); 
     }
 "boolean"    
     { 
@@ -69,8 +72,8 @@ tipoDato = "byte" | "short" | "int" | "long" | "float" | "double" | "boolean" | 
     }
 "String"    
     { 
-        tokens.add("CADENA: " + yytext()); 
-        return new Symbol(sym.CADENA, yyline, yycolumn); 
+        tokens.add("STRING: " + yytext()); 
+        return new Symbol(sym.STRING, yyline, yycolumn); 
     }
 
 /* Valores de tipos */
@@ -84,64 +87,149 @@ tipoDato = "byte" | "short" | "int" | "long" | "float" | "double" | "boolean" | 
         tokens.add("NUMERO: " + yytext()); 
         return new Symbol(sym.NUMERO, yyline, yycolumn, Integer.parseInt(yytext())); 
     }
-[0-9]+\.[0-9]+ 
+{numeroFlotante} 
     { 
         tokens.add("NUMERO_FLOTANTE: " + yytext()); 
         return new Symbol(sym.NUMERO_FLOTANTE, yyline, yycolumn, Float.parseFloat(yytext())); 
+    }
+{numeroDouble} 
+    { 
+        tokens.add("NUMERO_DOUBLE: " + yytext()); 
+        return new Symbol(sym.NUMERO_DOUBLE, yyline, yycolumn, Double.parseDouble(yytext())); 
     }
 true|false 
     {
         tokens.add("VALOR_BOOLEANO: " + yytext());
         return new Symbol(sym.VALOR_BOOLEANO, yyline, yycolumn, Boolean.parseBoolean(yytext()));
     }
-\'[^']\' 
+{caracter}
     {
         tokens.add("VALOR_CARACTER: " + yytext());
         return new Symbol(sym.VALOR_CARACTER, yyline, yycolumn, yytext().charAt(1));
     }
-\"[^\"]*\" 
+{cadena} 
     {
-        tokens.add("VALOR_CADENA: " + yytext());
-        return new Symbol(sym.VALOR_CADENA, yyline, yycolumn, yytext().substring(1, yytext().length() - 1));
+        tokens.add("CADENA: " + yytext());
+        return new Symbol(sym.CADENA, yyline, yycolumn, yytext().substring(1, yytext().length() - 1));
     }
 
 /* Arreglo y Matriz de tipos de dato */
-{tipoDato}\\[\\]
+"byte"\\[\\]
 {
-    tokens.add("ARREGLO: " + yytext());
-    return new Symbol(sym.ARREGLO, yyline, yycolumn, yytext());
+    tokens.add("ARREGLO_BYTE: " + yytext());
+    return new Symbol(sym.ARREGLO_BYTE, yyline, yycolumn, yytext());
 }
-{tipoDato}\\[\\]+
+"byte"\\[\\]+
 {
-    tokens.add("MATRIZ: " + yytext());
-    return new Symbol(sym.MATRIZ, yyline, yycolumn, yytext());
+    tokens.add("MATRIZ_BYTE: " + yytext());
+    return new Symbol(sym.MATRIZ_BYTE, yyline, yycolumn, yytext());
+}
+"short"\\[\\]
+{
+    tokens.add("ARREGLO_SHORT: " + yytext());
+    return new Symbol(sym.ARREGLO_SHORT, yyline, yycolumn, yytext());
+}
+"short"\\[\\]+
+{
+    tokens.add("MATRIZ_SHORT: " + yytext());
+    return new Symbol(sym.MATRIZ_SHORT, yyline, yycolumn, yytext());
+}
+"int"\\[\\]
+{
+    tokens.add("ARREGLO_INT: " + yytext());
+    return new Symbol(sym.ARREGLO_INT, yyline, yycolumn, yytext());
+}
+"int"\\[\\]+
+{
+    tokens.add("MATRIZ_INT: " + yytext());
+    return new Symbol(sym.MATRIZ_INT, yyline, yycolumn, yytext());
+}
+"long"\\[\\]
+{
+    tokens.add("ARREGLO_LONG: " + yytext());
+    return new Symbol(sym.ARREGLO_LONG, yyline, yycolumn, yytext());
+}
+"long"\\[\\]+
+{
+    tokens.add("MATRIZ_LONG: " + yytext());
+    return new Symbol(sym.MATRIZ_LONG, yyline, yycolumn, yytext());
+}
+"float"\\[\\]
+{
+    tokens.add("ARREGLO_FLOAT: " + yytext());
+    return new Symbol(sym.ARREGLO_FLOAT, yyline, yycolumn, yytext());
+}
+"float"\\[\\]+
+{
+    tokens.add("MATRIZ_FLOAT: " + yytext());
+    return new Symbol(sym.MATRIZ_FLOAT, yyline, yycolumn, yytext());
+}
+"double"\\[\\]
+{
+    tokens.add("ARREGLO_DOUBLE: " + yytext());
+    return new Symbol(sym.ARREGLO_DOUBLE, yyline, yycolumn, yytext());
+}
+"double"\\[\\]+
+{
+    tokens.add("MATRIZ_DOUBLE: " + yytext());
+    return new Symbol(sym.MATRIZ_DOUBLE, yyline, yycolumn, yytext());
+}
+"boolean"\\[\\]
+{
+    tokens.add("ARREGLO_BOOLEANO: " + yytext());
+    return new Symbol(sym.ARREGLO_BOOLEANO, yyline, yycolumn, yytext());
+}
+"boolean"\\[\\]+
+{
+    tokens.add("MATRIZ_BOOLEANO: " + yytext());
+    return new Symbol(sym.MATRIZ_BOOLEANO, yyline, yycolumn, yytext());
+}
+"char"\\[\\]
+{
+    tokens.add("ARREGLO_CARACTER: " + yytext());
+    return new Symbol(sym.ARREGLO_CARACTER, yyline, yycolumn, yytext());
+}
+"char"\\[\\]+
+{
+    tokens.add("MATRIZ_CARACTER: " + yytext());
+    return new Symbol(sym.MATRIZ_CARACTER, yyline, yycolumn, yytext());
+}
+"String"\\[\\]
+{
+    tokens.add("ARREGLO_STRING: " + yytext());
+    return new Symbol(sym.ARREGLO_STRING, yyline, yycolumn, yytext());
+}
+"String"\\[\\]+
+{
+    tokens.add("MATRIZ_STRING: " + yytext());
+    return new Symbol(sym.MATRIZ_STRING, yyline, yycolumn, yytext());
 }
 
 /* Operadores */
 "+"
     {
-        tokens.add("OPERADOR: " + yytext()); 
-        return new Symbol(sym.OPERADOR, yyline, yycolumn, yytext()); 
+        tokens.add("OPERADOR_MAS: " + yytext()); 
+        return new Symbol(sym.OPERADOR_MAS, yyline, yycolumn, yytext()); 
     }
 "-"  
     {
-        tokens.add("OPERADOR: " + yytext()); 
-        return new Symbol(sym.OPERADOR, yyline, yycolumn, yytext()); 
+        tokens.add("OPERADOR_MENOS: " + yytext()); 
+        return new Symbol(sym.OPERADOR_MENOS, yyline, yycolumn, yytext()); 
     }
 "*"  
     {
-        tokens.add("OPERADOR: " + yytext()); 
-        return new Symbol(sym.OPERADOR, yyline, yycolumn, yytext()); 
+        tokens.add("OPERADOR_POR: " + yytext()); 
+        return new Symbol(sym.OPERADOR_POR, yyline, yycolumn, yytext()); 
     }
 "/"  
     {
-        tokens.add("OPERADOR: " + yytext()); 
-        return new Symbol(sym.OPERADOR, yyline, yycolumn, yytext()); 
+        tokens.add("OPERADOR_ENTRE: " + yytext()); 
+        return new Symbol(sym.OPERADOR_ENTRE, yyline, yycolumn, yytext()); 
     }
 "%"  
     {
-        tokens.add("OPERADOR: " + yytext()); 
-        return new Symbol(sym.OPERADOR, yyline, yycolumn, yytext()); 
+        tokens.add("OPERADOR_MODULO: " + yytext()); 
+        return new Symbol(sym.OPERADOR_MODULO, yyline, yycolumn, yytext()); 
     }
 "++" 
     {

@@ -8,84 +8,134 @@ package sintactico;
 /** CUP generated class containing symbol constants. */
 public class sym {
   /* terminals */
-  public static final int NUMERO = 3;
-  public static final int RESERVADA_IMPORT = 50;
-  public static final int SIGNO_DOS_PUNTOS = 54;
-  public static final int RESERVADA_CLASS = 46;
-  public static final int SENTENCIA_ELSE_IF = 30;
-  public static final int VALOR_BOOLEANO = 10;
-  public static final int CORCHETE_CERRADO = 58;
-  public static final int RESERVADA_VOID = 47;
-  public static final int ENTERO = 4;
-  public static final int SENTENCIA_IF = 31;
-  public static final int SIGNO_PUNTO_Y_COMA = 53;
-  public static final int MATRIZ = 14;
-  public static final int RESERVADA_PROTECTED = 43;
-  public static final int OPERADOR_MENOR_QUE = 24;
-  public static final int SENTENCIA_CONTINUE = 36;
-  public static final int RESERVADA_PUBLIC = 41;
-  public static final int OPERADOR_DE_ASIGNACION = 18;
-  public static final int PARENTESIS_ABIERTO = 55;
-  public static final int RESERVADA_PACKAGE = 49;
-  public static final int LLAVE_ABIERTA = 59;
-  public static final int CICLO_FOR = 40;
-  public static final int SENTENCIA_CASE = 34;
-  public static final int IDENTIFICADOR = 2;
-  public static final int OPERADOR_DIFERENTE_DE = 22;
-  public static final int CARACTER = 7;
-  public static final int OPERADOR_MAYOR_IGUAL = 25;
-  public static final int SIGNO_COMA = 52;
-  public static final int VALOR_CADENA = 12;
-  public static final int SENTENCIA_DEFAULT = 37;
-  public static final int SENTENCIA_BREAK = 35;
-  public static final int RESERVADA_FINAL = 44;
-  public static final int CORCHETE_ABIERTO = 57;
+  public static final int CORCHETE_CERRADO = 83;
+  public static final int SHORT = 3;
+  public static final int OPERADOR_IGUAL_A = 46;
+  public static final int IDENTIFICADOR = 11;
+  public static final int CICLO_DO = 64;
+  public static final int MATRIZ_LONG = 30;
+  public static final int ARREGLO_CARACTER = 25;
+  public static final int ARREGLO_INT = 20;
+  public static final int MATRIZ_FLOAT = 31;
+  public static final int SENTENCIA_ELSE_IF = 55;
+  public static final int RESERVADA_FINAL = 69;
+  public static final int OPERADOR_MENOR_QUE = 49;
+  public static final int CORCHETE_ABIERTO = 82;
+  public static final int SENTENCIA_CASE = 59;
+  public static final int RESERVADA_PACKAGE = 74;
+  public static final int ARREGLO_LONG = 21;
+  public static final int MATRIZ_STRING = 35;
+  public static final int CICLO_WHILE = 63;
+  public static final int RESERVADA_CLASS = 71;
+  public static final int OPERADOR_OR = 53;
+  public static final int OPERADOR_POR = 38;
+  public static final int SENTENCIA_IF = 56;
+  public static final int ARREGLO_FLOAT = 22;
+  public static final int SIGNO_PUNTO_Y_COMA = 78;
+  public static final int SIGNO_COMA = 77;
+  public static final int NUMERO = 12;
+  public static final int DOUBLE = 7;
+  public static final int OPERADOR_NOT = 54;
+  public static final int SENTENCIA_SWITCH = 58;
+  public static final int MATRIZ_INT = 29;
+  public static final int VALOR_BOOLEANO = 15;
+  public static final int OPERADOR_DE_SUSTRACCION = 45;
+  public static final int RESERVADA_RETURN = 73;
+  public static final int RESERVADA_PUBLIC = 66;
+  public static final int SENTENCIA_DEFAULT = 62;
+  public static final int OPERADOR_MAYOR_QUE = 48;
+  public static final int FLOAT = 6;
+  public static final int ARREGLO_STRING = 26;
+  public static final int SENTENCIA_BREAK = 60;
+  public static final int MATRIZ_DOUBLE = 32;
+  public static final int BOOLEANO = 8;
+  public static final int SIGNO_PUNTO = 76;
+  public static final int RESERVADA_IMPORT = 75;
+  public static final int SENTENCIA_CONTINUE = 61;
+  public static final int LONG = 5;
+  public static final int MATRIZ_BOOLEANO = 33;
+  public static final int OPERADOR_DE_ADICION = 44;
+  public static final int MATRIZ_BYTE = 27;
+  public static final int LLAVE_CERRADA = 85;
+  public static final int ARREGLO_DOUBLE = 23;
+  public static final int CICLO_FOR = 65;
+  public static final int OPERADOR_MAS = 36;
+  public static final int VALOR_CARACTER = 16;
+  public static final int ARREGLO_BYTE = 18;
+  public static final int OPERADOR_DIFERENTE_DE = 47;
+  public static final int INT = 4;
   public static final int EOF = 0;
-  public static final int NUMERO_FLOTANTE = 9;
-  public static final int OPERADOR_MENOR_IGUAL = 26;
-  public static final int ARREGLO = 13;
+  public static final int LLAVE_ABIERTA = 84;
+  public static final int RESERVADA_STATIC = 70;
+  public static final int CARACTER = 9;
+  public static final int OPERADOR_DE_ASIGNACION = 43;
+  public static final int NUMERO_FLOTANTE = 13;
+  public static final int RESERVADA_PRIVATE = 67;
+  public static final int ARREGLO_BOOLEANO = 24;
   public static final int error = 1;
-  public static final int CADENA = 8;
-  public static final int OPERADOR_OR = 28;
-  public static final int VALOR_CARACTER = 11;
-  public static final int CICLO_DO = 39;
-  public static final int OPERADOR_INCREMENTO = 16;
-  public static final int OPERADOR_AND = 27;
-  public static final int OPERADOR_NOT = 29;
-  public static final int RESERVADA_PRIVATE = 42;
-  public static final int RESERVADA_STATIC = 45;
-  public static final int SIGNO_PUNTO = 51;
-  public static final int OPERADOR = 15;
-  public static final int OPERADOR_DECREMENTO = 17;
-  public static final int SENTENCIA_ELSE = 32;
-  public static final int BOOLEANO = 6;
-  public static final int PARENTESIS_CERRADO = 56;
-  public static final int LLAVE_CERRADA = 60;
-  public static final int OPERADOR_IGUAL_A = 21;
-  public static final int OPERADOR_DE_ADICION = 19;
-  public static final int OPERADOR_MAYOR_QUE = 23;
-  public static final int CICLO_WHILE = 38;
-  public static final int RESERVADA_RETURN = 48;
-  public static final int SENTENCIA_SWITCH = 33;
-  public static final int FLOTANTE = 5;
-  public static final int OPERADOR_DE_SUSTRACCION = 20;
+  public static final int MATRIZ_SHORT = 28;
+  public static final int OPERADOR_INCREMENTO = 41;
+  public static final int PARENTESIS_CERRADO = 81;
+  public static final int RESERVADA_VOID = 72;
+  public static final int MATRIZ_CARACTER = 34;
+  public static final int OPERADOR_MENOS = 37;
+  public static final int SENTENCIA_ELSE = 57;
+  public static final int OPERADOR_MODULO = 40;
+  public static final int OPERADOR_MENOR_IGUAL = 51;
+  public static final int CADENA = 17;
+  public static final int OPERADOR_MAYOR_IGUAL = 50;
+  public static final int OPERADOR_AND = 52;
+  public static final int ARREGLO_SHORT = 19;
+  public static final int STRING = 10;
+  public static final int RESERVADA_PROTECTED = 68;
+  public static final int PARENTESIS_ABIERTO = 80;
+  public static final int OPERADOR_DECREMENTO = 42;
+  public static final int BYTE = 2;
+  public static final int SIGNO_DOS_PUNTOS = 79;
+  public static final int NUMERO_DOUBLE = 14;
+  public static final int OPERADOR_ENTRE = 39;
   public static final String[] terminalNames = new String[] {
   "EOF",
   "error",
-  "IDENTIFICADOR",
-  "NUMERO",
-  "ENTERO",
-  "FLOTANTE",
+  "BYTE",
+  "SHORT",
+  "INT",
+  "LONG",
+  "FLOAT",
+  "DOUBLE",
   "BOOLEANO",
   "CARACTER",
-  "CADENA",
+  "STRING",
+  "IDENTIFICADOR",
+  "NUMERO",
   "NUMERO_FLOTANTE",
+  "NUMERO_DOUBLE",
   "VALOR_BOOLEANO",
   "VALOR_CARACTER",
-  "VALOR_CADENA",
-  "ARREGLO",
-  "MATRIZ",
-  "OPERADOR",
+  "CADENA",
+  "ARREGLO_BYTE",
+  "ARREGLO_SHORT",
+  "ARREGLO_INT",
+  "ARREGLO_LONG",
+  "ARREGLO_FLOAT",
+  "ARREGLO_DOUBLE",
+  "ARREGLO_BOOLEANO",
+  "ARREGLO_CARACTER",
+  "ARREGLO_STRING",
+  "MATRIZ_BYTE",
+  "MATRIZ_SHORT",
+  "MATRIZ_INT",
+  "MATRIZ_LONG",
+  "MATRIZ_FLOAT",
+  "MATRIZ_DOUBLE",
+  "MATRIZ_BOOLEANO",
+  "MATRIZ_CARACTER",
+  "MATRIZ_STRING",
+  "OPERADOR_MAS",
+  "OPERADOR_MENOS",
+  "OPERADOR_POR",
+  "OPERADOR_ENTRE",
+  "OPERADOR_MODULO",
   "OPERADOR_INCREMENTO",
   "OPERADOR_DECREMENTO",
   "OPERADOR_DE_ASIGNACION",

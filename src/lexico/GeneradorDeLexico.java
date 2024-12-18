@@ -8,7 +8,7 @@ public class GeneradorDeLexico {
 
     public static void main(String[] args) {
         
-        String ruta = "C:/Users/ALUMNO/Documents/NetBeansProjects/FeralCompiler/src/lexico/Lexico.flex";
+        String ruta = "C:/Users/FeralcoJam/Documents/NetBeansProjects/FeralCompiler/src/lexico/Lexico.flex";
         generarLexico(ruta);
         
     }
