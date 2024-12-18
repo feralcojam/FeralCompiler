@@ -18,26 +18,49 @@ public class FeralCompiler extends javax.swing.JFrame {
         personalizarComponentes();
     }
     
-    
-    
     private void analizarLexico() {
         String codigoIngresado = escritorCodigo.getText();
-                try {
-                    java.io.StringReader lector = new java.io.StringReader(codigoIngresado);
-                    
-                    lexico.Lexico objLexico = new lexico.Lexico(lector);
-                    
-                    salidaLexico.setText("");
-                    
-                    java_cup.runtime.Symbol token;
-                    while ((token = objLexico.next_token()).sym != sintactico.sym.EOF) {
-                        salidaLexico.append(objLexico.obtenerTokens().get(objLexico.obtenerTokens().size() - 1) + "\n");
-                    }
-                } catch(Exception ex) {
-                    System.out.println("Error al analizar el código: " + ex.getMessage());
-                }
+        try {
+            java.io.StringReader lector = new java.io.StringReader(codigoIngresado);
+
+            lexico.Lexico objLexico = new lexico.Lexico(lector);
+
+            salidaLexico.setText("");
+
+            java_cup.runtime.Symbol token;
+            while ((token = objLexico.next_token()).sym != sintactico.sym.EOF) {
+                salidaLexico.append(objLexico.obtenerTokens().get(objLexico.obtenerTokens().size() - 1) + "\n");
+            }
+            
+            salidaLexico.append("FIN DEL ANÁLISIS LÉXICO.");
+        } catch (Exception ex) {
+            System.out.println("Error al analizar el código: " + ex.getMessage());
+        }
     }
 
+    private void analizarSintactico() {
+        String codigoIngresado = escritorCodigo.getText();
+        try {
+            java.io.StringReader lector = new java.io.StringReader(codigoIngresado);
+            
+            lexico.Lexico objLexico = new lexico.Lexico(lector);
+            
+            sintactico.Sintactico objSintactico = new sintactico.Sintactico(objLexico);
+            
+            salidaSintactico.setText("");
+            
+            objSintactico.parse();
+            salidaSintactico.append("Análisis sintáctico realizado con éxito.");
+        } catch (Exception ex) {
+            String mensajeDeError = "Error sintáctico: " + ex.getMessage();
+            
+            int linea = ex.getMessage().contains("line") ? Integer.parseInt(ex.getMessage().split("line")[1].split(":")[0].trim()) : -1;
+            int columna = ex.getMessage().contains("column") ? Integer.parseInt(ex.getMessage().split("column")[1].split(":")[0].trim()) : -1;
+            
+            salidaSintactico.append("Error sintáctico en la línea " + linea + ", columna " + columna + ": " + mensajeDeError + "\n");
+        }
+    }
+    
     private void cerrarVentana() {
         botonCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
@@ -486,6 +509,7 @@ public class FeralCompiler extends javax.swing.JFrame {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e) {
                 analizarLexico();
+                analizarSintactico();
             }
             
             @Override

@@ -106,6 +106,8 @@ parametro ::=
 codigo ::=
     declaracionInicializada
     | declaracion
+    | codigo declaracionInicializada
+    | codigo declaracion
 ;
 declaracionInicializada ::=
     BYTE IDENTIFICADOR OPERADOR_DE_ASIGNACION NUMERO SIGNO_PUNTO_Y_COMA
