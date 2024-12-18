@@ -920,505 +920,505 @@ public class Lexico implements java_cup.runtime.Scanner {
           case 88: break;
           case 3:
             { tokens.add("OPERADOR_NOT: " + yytext()); 
-        return new Symbol(sym.OPERADOR_NOT, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_NOT, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 89: break;
           case 4:
             { tokens.add("OPERADOR_MODULO: " + yytext()); 
-        return new Symbol(sym.OPERADOR_MODULO, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_MODULO, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 90: break;
           case 5:
             { tokens.add("PARENTESIS_ABIERTO: " + yytext()); 
-        return new Symbol(sym.PARENTESIS_ABIERTO, yyline, yycolumn, yytext());
+        return new Symbol(sym.PARENTESIS_ABIERTO, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 91: break;
           case 6:
             { tokens.add("PARENTESIS_CERRADO: " + yytext()); 
-        return new Symbol(sym.PARENTESIS_CERRADO, yyline, yycolumn, yytext());
+        return new Symbol(sym.PARENTESIS_CERRADO, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 92: break;
           case 7:
             { tokens.add("OPERADOR_POR: " + yytext()); 
-        return new Symbol(sym.OPERADOR_POR, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_POR, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 93: break;
           case 8:
             { tokens.add("OPERADOR_MAS: " + yytext()); 
-        return new Symbol(sym.OPERADOR_MAS, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_MAS, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 94: break;
           case 9:
             { tokens.add("SIGNO_COMA: " + yytext()); 
-        return new Symbol(sym.SIGNO_COMA, yyline, yycolumn, yytext());
+        return new Symbol(sym.SIGNO_COMA, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 95: break;
           case 10:
             { tokens.add("OPERADOR_MENOS: " + yytext()); 
-        return new Symbol(sym.OPERADOR_MENOS, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_MENOS, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 96: break;
           case 11:
             { tokens.add("SIGNO_PUNTO: " + yytext()); 
-        return new Symbol(sym.SIGNO_PUNTO, yyline, yycolumn, yytext());
+        return new Symbol(sym.SIGNO_PUNTO, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 97: break;
           case 12:
             { tokens.add("OPERADOR_ENTRE: " + yytext()); 
-        return new Symbol(sym.OPERADOR_ENTRE, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_ENTRE, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 98: break;
           case 13:
             { tokens.add("NUMERO: " + yytext()); 
-        return new Symbol(sym.NUMERO, yyline, yycolumn, Integer.parseInt(yytext()));
+        return new Symbol(sym.NUMERO, yyline + 1, yycolumn + 1, Integer.parseInt(yytext()));
             }
           // fall through
           case 99: break;
           case 14:
             { tokens.add("SIGNO_DOS_PUNTOS: " + yytext()); 
-        return new Symbol(sym.SIGNO_DOS_PUNTOS, yyline, yycolumn, yytext());
+        return new Symbol(sym.SIGNO_DOS_PUNTOS, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 100: break;
           case 15:
             { tokens.add("SIGNO_PUNTO_Y_COMA: " + yytext()); 
-        return new Symbol(sym.SIGNO_PUNTO_Y_COMA, yyline, yycolumn, yytext());
+        return new Symbol(sym.SIGNO_PUNTO_Y_COMA, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 101: break;
           case 16:
             { tokens.add("OPERADOR_MENOR_QUE: " + yytext()); 
-        return new Symbol(sym.OPERADOR_MENOR_QUE, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_MENOR_QUE, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 102: break;
           case 17:
             { tokens.add("OPERADOR_DE_ASIGNACION: " + yytext()); 
-        return new Symbol(sym.OPERADOR_DE_ASIGNACION, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_DE_ASIGNACION, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 103: break;
           case 18:
             { tokens.add("OPERADOR_MAYOR_QUE: " + yytext()); 
-        return new Symbol(sym.OPERADOR_MAYOR_QUE, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_MAYOR_QUE, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 104: break;
           case 19:
             { tokens.add("IDENTIFICADOR: " + yytext()); 
-        return new Symbol(sym.IDENTIFICADOR, yyline, yycolumn, yytext());
+        return new Symbol(sym.IDENTIFICADOR, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 105: break;
           case 20:
             { tokens.add("CORCHETE_ABIERTO: " + yytext()); 
-        return new Symbol(sym.CORCHETE_ABIERTO, yyline, yycolumn, yytext());
+        return new Symbol(sym.CORCHETE_ABIERTO, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 106: break;
           case 21:
             { tokens.add("CORCHETE_CERRADO: " + yytext()); 
-        return new Symbol(sym.CORCHETE_CERRADO, yyline, yycolumn, yytext());
+        return new Symbol(sym.CORCHETE_CERRADO, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 107: break;
           case 22:
             { tokens.add("LLAVE_ABIERTA: " + yytext()); 
-        return new Symbol(sym.LLAVE_ABIERTA, yyline, yycolumn, yytext());
+        return new Symbol(sym.LLAVE_ABIERTA, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 108: break;
           case 23:
             { tokens.add("LLAVE_CERRADA: " + yytext()); 
-        return new Symbol(sym.LLAVE_CERRADA, yyline, yycolumn, yytext());
+        return new Symbol(sym.LLAVE_CERRADA, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 109: break;
           case 24:
             { tokens.add("OPERADOR_DIFERENTE_DE: " + yytext()); 
-        return new Symbol(sym.OPERADOR_DIFERENTE_DE, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_DIFERENTE_DE, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 110: break;
           case 25:
             { tokens.add("CADENA: " + yytext());
-        return new Symbol(sym.CADENA, yyline, yycolumn, yytext().substring(1, yytext().length() - 1));
+        return new Symbol(sym.CADENA, yyline + 1, yycolumn + 1, yytext().substring(1, yytext().length() - 1));
             }
           // fall through
           case 111: break;
           case 26:
             { tokens.add("OPERADOR_AND: " + yytext()); 
-        return new Symbol(sym.OPERADOR_AND, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_AND, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 112: break;
           case 27:
             { tokens.add("OPERADOR_INCREMENTO: " + yytext()); 
-        return new Symbol(sym.OPERADOR_INCREMENTO, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_INCREMENTO, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 113: break;
           case 28:
             { tokens.add("OPERADOR_DE_ADICION: " + yytext()); 
-        return new Symbol(sym.OPERADOR_DE_ADICION, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_DE_ADICION, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 114: break;
           case 29:
             { tokens.add("OPERADOR_DECREMENTO: " + yytext()); 
-        return new Symbol(sym.OPERADOR_DECREMENTO, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_DECREMENTO, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 115: break;
           case 30:
             { tokens.add("OPERADOR_DE_SUSTRACCION: " + yytext()); 
-        return new Symbol(sym.OPERADOR_DE_SUSTRACCION, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_DE_SUSTRACCION, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 116: break;
           case 31:
             { tokens.add("NUMERO_FLOTANTE: " + yytext()); 
-        return new Symbol(sym.NUMERO_FLOTANTE, yyline, yycolumn, Float.parseFloat(yytext()));
+        return new Symbol(sym.NUMERO_FLOTANTE, yyline + 1, yycolumn + 1, Float.parseFloat(yytext()));
             }
           // fall through
           case 117: break;
           case 32:
             { tokens.add("OPERADOR_MENOR_IGUAL: " + yytext()); 
-        return new Symbol(sym.OPERADOR_MENOR_IGUAL, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_MENOR_IGUAL, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 118: break;
           case 33:
             { tokens.add("OPERADOR_IGUAL_A: " + yytext()); 
-        return new Symbol(sym.OPERADOR_IGUAL_A, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_IGUAL_A, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 119: break;
           case 34:
             { tokens.add("OPERADOR_MAYOR_IGUAL: " + yytext()); 
-        return new Symbol(sym.OPERADOR_MAYOR_IGUAL, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_MAYOR_IGUAL, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 120: break;
           case 35:
             { tokens.add("CICLO_DO: " + yytext()); 
-        return new Symbol(sym.CICLO_DO, yyline, yycolumn, yytext());
+        return new Symbol(sym.CICLO_DO, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 121: break;
           case 36:
             { tokens.add("SENTENCIA_IF: " + yytext()); 
-        return new Symbol(sym.SENTENCIA_IF, yyline, yycolumn, yytext());
+        return new Symbol(sym.SENTENCIA_IF, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 122: break;
           case 37:
             { tokens.add("OPERADOR_OR: " + yytext()); 
-        return new Symbol(sym.OPERADOR_OR, yyline, yycolumn, yytext());
+        return new Symbol(sym.OPERADOR_OR, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 123: break;
           case 38:
             { tokens.add("VALOR_CARACTER: " + yytext());
-        return new Symbol(sym.VALOR_CARACTER, yyline, yycolumn, yytext().charAt(1));
+        return new Symbol(sym.VALOR_CARACTER, yyline + 1, yycolumn + 1, yytext().charAt(1));
             }
           // fall through
           case 124: break;
           case 39:
             { tokens.add("NUMERO_DOUBLE: " + yytext()); 
-        return new Symbol(sym.NUMERO_DOUBLE, yyline, yycolumn, Double.parseDouble(yytext()));
+        return new Symbol(sym.NUMERO_DOUBLE, yyline + 1, yycolumn + 1, Double.parseDouble(yytext()));
             }
           // fall through
           case 125: break;
           case 40:
             { tokens.add("CICLO_FOR: " + yytext()); 
-        return new Symbol(sym.CICLO_FOR, yyline, yycolumn, yytext());
+        return new Symbol(sym.CICLO_FOR, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 126: break;
           case 41:
             { tokens.add("INT: " + yytext()); 
-        return new Symbol(sym.INT, yyline, yycolumn);
+        return new Symbol(sym.INT, yyline + 1, yycolumn + 1);
             }
           // fall through
           case 127: break;
           case 42:
             { tokens.add("RESERVADA_NEW: " + yytext()); 
-        return new Symbol(sym.RESERVADA_NEW, yyline, yycolumn, yytext());
+        return new Symbol(sym.RESERVADA_NEW, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 128: break;
           case 43:
             { tokens.add("BYTE: " + yytext()); 
-        return new Symbol(sym.BYTE, yyline, yycolumn);
+        return new Symbol(sym.BYTE, yyline + 1, yycolumn + 1);
             }
           // fall through
           case 129: break;
           case 44:
             { tokens.add("SENTENCIA_CASE: " + yytext()); 
-        return new Symbol(sym.SENTENCIA_CASE, yyline, yycolumn, yytext());
+        return new Symbol(sym.SENTENCIA_CASE, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 130: break;
           case 45:
             { tokens.add("CARACTER: " + yytext()); 
-        return new Symbol(sym.CARACTER, yyline, yycolumn);
+        return new Symbol(sym.CARACTER, yyline + 1, yycolumn + 1);
             }
           // fall through
           case 131: break;
           case 46:
             { tokens.add("SENTENCIA_ELSE: " + yytext()); 
-        return new Symbol(sym.SENTENCIA_ELSE, yyline, yycolumn, yytext());
+        return new Symbol(sym.SENTENCIA_ELSE, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 132: break;
           case 47:
             { tokens.add("LONG: " + yytext()); 
-        return new Symbol(sym.LONG, yyline, yycolumn);
+        return new Symbol(sym.LONG, yyline + 1, yycolumn + 1);
             }
           // fall through
           case 133: break;
           case 48:
             { tokens.add("VALOR_BOOLEANO: " + yytext());
-        return new Symbol(sym.VALOR_BOOLEANO, yyline, yycolumn, Boolean.parseBoolean(yytext()));
+        return new Symbol(sym.VALOR_BOOLEANO, yyline + 1, yycolumn + 1, Boolean.parseBoolean(yytext()));
             }
           // fall through
           case 134: break;
           case 49:
             { tokens.add("RESERVADA_VOID: " + yytext()); 
-        return new Symbol(sym.RESERVADA_VOID, yyline, yycolumn, yytext());
+        return new Symbol(sym.RESERVADA_VOID, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 135: break;
           case 50:
             { tokens.add("SENTENCIA_BREAK: " + yytext()); 
-        return new Symbol(sym.SENTENCIA_BREAK, yyline, yycolumn, yytext());
+        return new Symbol(sym.SENTENCIA_BREAK, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 136: break;
           case 51:
             { tokens.add("RESERVADA_CLASS: " + yytext()); 
-        return new Symbol(sym.RESERVADA_CLASS, yyline, yycolumn, yytext());
+        return new Symbol(sym.RESERVADA_CLASS, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 137: break;
           case 52:
             { tokens.add("RESERVADA_FINAL: " + yytext()); 
-        return new Symbol(sym.RESERVADA_FINAL, yyline, yycolumn, yytext());
+        return new Symbol(sym.RESERVADA_FINAL, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 138: break;
           case 53:
             { tokens.add("FLOAT: " + yytext()); 
-        return new Symbol(sym.FLOAT, yyline, yycolumn);
+        return new Symbol(sym.FLOAT, yyline + 1, yycolumn + 1);
             }
           // fall through
           case 139: break;
           case 54:
             { tokens.add("ARREGLO_INT: " + yytext());
-    return new Symbol(sym.ARREGLO_INT, yyline, yycolumn, yytext());
+    return new Symbol(sym.ARREGLO_INT, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 140: break;
           case 55:
             { tokens.add("SHORT: " + yytext()); 
-        return new Symbol(sym.SHORT, yyline, yycolumn);
+        return new Symbol(sym.SHORT, yyline + 1, yycolumn + 1);
             }
           // fall through
           case 141: break;
           case 56:
             { tokens.add("CICLO_WHILE: " + yytext()); 
-        return new Symbol(sym.CICLO_WHILE, yyline, yycolumn, yytext());
+        return new Symbol(sym.CICLO_WHILE, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 142: break;
           case 57:
             { tokens.add("STRING: " + yytext()); 
-        return new Symbol(sym.STRING, yyline, yycolumn);
+        return new Symbol(sym.STRING, yyline + 1, yycolumn + 1);
             }
           // fall through
           case 143: break;
           case 58:
             { tokens.add("ARREGLO_BYTE: " + yytext());
-    return new Symbol(sym.ARREGLO_BYTE, yyline, yycolumn, yytext());
+    return new Symbol(sym.ARREGLO_BYTE, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 144: break;
           case 59:
             { tokens.add("ARREGLO_CARACTER: " + yytext());
-    return new Symbol(sym.ARREGLO_CARACTER, yyline, yycolumn, yytext());
+    return new Symbol(sym.ARREGLO_CARACTER, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 145: break;
           case 60:
             { tokens.add("DOUBLE: " + yytext()); 
-        return new Symbol(sym.DOUBLE, yyline, yycolumn);
+        return new Symbol(sym.DOUBLE, yyline + 1, yycolumn + 1);
             }
           // fall through
           case 146: break;
           case 61:
             { tokens.add("RESERVADA_IMPORT: " + yytext()); 
-        return new Symbol(sym.RESERVADA_IMPORT, yyline, yycolumn, yytext());
+        return new Symbol(sym.RESERVADA_IMPORT, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 147: break;
           case 62:
             { tokens.add("ARREGLO_LONG: " + yytext());
-    return new Symbol(sym.ARREGLO_LONG, yyline, yycolumn, yytext());
+    return new Symbol(sym.ARREGLO_LONG, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 148: break;
           case 63:
             { tokens.add("RESERVADA_PUBLIC: " + yytext()); 
-        return new Symbol(sym.RESERVADA_PUBLIC, yyline, yycolumn, yytext());
+        return new Symbol(sym.RESERVADA_PUBLIC, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 149: break;
           case 64:
             { tokens.add("RESERVADA_RETURN: " + yytext()); 
-        return new Symbol(sym.RESERVADA_RETURN, yyline, yycolumn, yytext());
+        return new Symbol(sym.RESERVADA_RETURN, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 150: break;
           case 65:
             { tokens.add("RESERVADA_STATIC: " + yytext()); 
-        return new Symbol(sym.RESERVADA_STATIC, yyline, yycolumn, yytext());
+        return new Symbol(sym.RESERVADA_STATIC, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 151: break;
           case 66:
             { tokens.add("SENTENCIA_SWITCH: " + yytext()); 
-        return new Symbol(sym.SENTENCIA_SWITCH, yyline, yycolumn, yytext());
+        return new Symbol(sym.SENTENCIA_SWITCH, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 152: break;
           case 67:
             { tokens.add("BOOLEANO: " + yytext()); 
-        return new Symbol(sym.BOOLEANO, yyline, yycolumn);
+        return new Symbol(sym.BOOLEANO, yyline + 1, yycolumn + 1);
             }
           // fall through
           case 153: break;
           case 68:
             { tokens.add("SENTENCIA_DEFAULT: " + yytext()); 
-        return new Symbol(sym.SENTENCIA_DEFAULT, yyline, yycolumn, yytext());
+        return new Symbol(sym.SENTENCIA_DEFAULT, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 154: break;
           case 69:
             { tokens.add("SENTENCIA_ELSE_IF: " + yytext()); 
-        return new Symbol(sym.SENTENCIA_ELSE_IF, yyline, yycolumn, yytext());
+        return new Symbol(sym.SENTENCIA_ELSE_IF, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 155: break;
           case 70:
             { tokens.add("ARREGLO_FLOAT: " + yytext());
-    return new Symbol(sym.ARREGLO_FLOAT, yyline, yycolumn, yytext());
+    return new Symbol(sym.ARREGLO_FLOAT, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 156: break;
           case 71:
             { tokens.add("MATRIZ_INT: " + yytext());
-    return new Symbol(sym.MATRIZ_INT, yyline, yycolumn, yytext());
+    return new Symbol(sym.MATRIZ_INT, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 157: break;
           case 72:
             { tokens.add("RESERVADA_PRIVATE: " + yytext()); 
-        return new Symbol(sym.RESERVADA_PRIVATE, yyline, yycolumn, yytext());
+        return new Symbol(sym.RESERVADA_PRIVATE, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 158: break;
           case 73:
             { tokens.add("ARREGLO_SHORT: " + yytext());
-    return new Symbol(sym.ARREGLO_SHORT, yyline, yycolumn, yytext());
+    return new Symbol(sym.ARREGLO_SHORT, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 159: break;
           case 74:
             { tokens.add("ARREGLO_STRING: " + yytext());
-    return new Symbol(sym.ARREGLO_STRING, yyline, yycolumn, yytext());
+    return new Symbol(sym.ARREGLO_STRING, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 160: break;
           case 75:
             { tokens.add("MATRIZ_BYTE: " + yytext());
-    return new Symbol(sym.MATRIZ_BYTE, yyline, yycolumn, yytext());
+    return new Symbol(sym.MATRIZ_BYTE, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 161: break;
           case 76:
             { tokens.add("MATRIZ_CARACTER: " + yytext());
-    return new Symbol(sym.MATRIZ_CARACTER, yyline, yycolumn, yytext());
+    return new Symbol(sym.MATRIZ_CARACTER, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 162: break;
           case 77:
             { tokens.add("SENTENCIA_CONTINUE: " + yytext()); 
-        return new Symbol(sym.SENTENCIA_CONTINUE, yyline, yycolumn, yytext());
+        return new Symbol(sym.SENTENCIA_CONTINUE, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 163: break;
           case 78:
             { tokens.add("ARREGLO_DOUBLE: " + yytext());
-    return new Symbol(sym.ARREGLO_DOUBLE, yyline, yycolumn, yytext());
+    return new Symbol(sym.ARREGLO_DOUBLE, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 164: break;
           case 79:
             { tokens.add("MATRIZ_LONG: " + yytext());
-    return new Symbol(sym.MATRIZ_LONG, yyline, yycolumn, yytext());
+    return new Symbol(sym.MATRIZ_LONG, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 165: break;
           case 80:
             { tokens.add("ARREGLO_BOOLEANO: " + yytext());
-    return new Symbol(sym.ARREGLO_BOOLEANO, yyline, yycolumn, yytext());
+    return new Symbol(sym.ARREGLO_BOOLEANO, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 166: break;
           case 81:
             { tokens.add("MATRIZ_FLOAT: " + yytext());
-    return new Symbol(sym.MATRIZ_FLOAT, yyline, yycolumn, yytext());
+    return new Symbol(sym.MATRIZ_FLOAT, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 167: break;
           case 82:
             { tokens.add("RESERVADA_PROTECTED: " + yytext()); 
-        return new Symbol(sym.RESERVADA_PROTECTED, yyline, yycolumn, yytext());
+        return new Symbol(sym.RESERVADA_PROTECTED, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 168: break;
           case 83:
             { tokens.add("MATRIZ_SHORT: " + yytext());
-    return new Symbol(sym.MATRIZ_SHORT, yyline, yycolumn, yytext());
+    return new Symbol(sym.MATRIZ_SHORT, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 169: break;
           case 84:
             { tokens.add("MATRIZ_STRING: " + yytext());
-    return new Symbol(sym.MATRIZ_STRING, yyline, yycolumn, yytext());
+    return new Symbol(sym.MATRIZ_STRING, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 170: break;
           case 85:
             { tokens.add("MATRIZ_DOUBLE: " + yytext());
-    return new Symbol(sym.MATRIZ_DOUBLE, yyline, yycolumn, yytext());
+    return new Symbol(sym.MATRIZ_DOUBLE, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 171: break;
           case 86:
             { tokens.add("MATRIZ_BOOLEANO: " + yytext());
-    return new Symbol(sym.MATRIZ_BOOLEANO, yyline, yycolumn, yytext());
+    return new Symbol(sym.MATRIZ_BOOLEANO, yyline + 1, yycolumn + 1, yytext());
             }
           // fall through
           case 172: break;
