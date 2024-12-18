@@ -8,7 +8,7 @@ package sintactico;
 /** CUP generated class containing symbol constants. */
 public class sym {
   /* terminals */
-  public static final int CORCHETE_CERRADO = 83;
+  public static final int CORCHETE_CERRADO = 84;
   public static final int SHORT = 3;
   public static final int OPERADOR_IGUAL_A = 46;
   public static final int IDENTIFICADOR = 11;
@@ -20,7 +20,7 @@ public class sym {
   public static final int SENTENCIA_ELSE_IF = 55;
   public static final int RESERVADA_FINAL = 69;
   public static final int OPERADOR_MENOR_QUE = 49;
-  public static final int CORCHETE_ABIERTO = 82;
+  public static final int CORCHETE_ABIERTO = 83;
   public static final int SENTENCIA_CASE = 59;
   public static final int RESERVADA_PACKAGE = 74;
   public static final int ARREGLO_LONG = 21;
@@ -31,8 +31,8 @@ public class sym {
   public static final int OPERADOR_POR = 38;
   public static final int SENTENCIA_IF = 56;
   public static final int ARREGLO_FLOAT = 22;
-  public static final int SIGNO_PUNTO_Y_COMA = 78;
-  public static final int SIGNO_COMA = 77;
+  public static final int SIGNO_PUNTO_Y_COMA = 79;
+  public static final int SIGNO_COMA = 78;
   public static final int NUMERO = 12;
   public static final int DOUBLE = 7;
   public static final int OPERADOR_NOT = 54;
@@ -49,14 +49,15 @@ public class sym {
   public static final int SENTENCIA_BREAK = 60;
   public static final int MATRIZ_DOUBLE = 32;
   public static final int BOOLEANO = 8;
-  public static final int SIGNO_PUNTO = 76;
+  public static final int SIGNO_PUNTO = 77;
   public static final int RESERVADA_IMPORT = 75;
+  public static final int RESERVADA_NEW = 76;
   public static final int SENTENCIA_CONTINUE = 61;
   public static final int LONG = 5;
   public static final int MATRIZ_BOOLEANO = 33;
   public static final int OPERADOR_DE_ADICION = 44;
   public static final int MATRIZ_BYTE = 27;
-  public static final int LLAVE_CERRADA = 85;
+  public static final int LLAVE_CERRADA = 86;
   public static final int ARREGLO_DOUBLE = 23;
   public static final int CICLO_FOR = 65;
   public static final int OPERADOR_MAS = 36;
@@ -65,7 +66,7 @@ public class sym {
   public static final int OPERADOR_DIFERENTE_DE = 47;
   public static final int INT = 4;
   public static final int EOF = 0;
-  public static final int LLAVE_ABIERTA = 84;
+  public static final int LLAVE_ABIERTA = 85;
   public static final int RESERVADA_STATIC = 70;
   public static final int CARACTER = 9;
   public static final int OPERADOR_DE_ASIGNACION = 43;
@@ -75,7 +76,7 @@ public class sym {
   public static final int error = 1;
   public static final int MATRIZ_SHORT = 28;
   public static final int OPERADOR_INCREMENTO = 41;
-  public static final int PARENTESIS_CERRADO = 81;
+  public static final int PARENTESIS_CERRADO = 82;
   public static final int RESERVADA_VOID = 72;
   public static final int MATRIZ_CARACTER = 34;
   public static final int OPERADOR_MENOS = 37;
@@ -88,10 +89,10 @@ public class sym {
   public static final int ARREGLO_SHORT = 19;
   public static final int STRING = 10;
   public static final int RESERVADA_PROTECTED = 68;
-  public static final int PARENTESIS_ABIERTO = 80;
+  public static final int PARENTESIS_ABIERTO = 81;
   public static final int OPERADOR_DECREMENTO = 42;
   public static final int BYTE = 2;
-  public static final int SIGNO_DOS_PUNTOS = 79;
+  public static final int SIGNO_DOS_PUNTOS = 80;
   public static final int NUMERO_DOUBLE = 14;
   public static final int OPERADOR_ENTRE = 39;
   public static final String[] terminalNames = new String[] {
@@ -171,6 +172,7 @@ public class sym {
   "RESERVADA_RETURN",
   "RESERVADA_PACKAGE",
   "RESERVADA_IMPORT",
+  "RESERVADA_NEW",
   "SIGNO_PUNTO",
   "SIGNO_COMA",
   "SIGNO_PUNTO_Y_COMA",

@@ -16,13 +16,26 @@ public class FeralCompiler extends javax.swing.JFrame {
         initComponents();
         personalizarBarraDeNavegacion();
         personalizarComponentes();
-        cargarLexico();
     }
     
     
     
-    private void cargarLexico() {
-        
+    private void analizarLexico() {
+        String codigoIngresado = escritorCodigo.getText();
+                try {
+                    java.io.StringReader lector = new java.io.StringReader(codigoIngresado);
+                    
+                    lexico.Lexico objLexico = new lexico.Lexico(lector);
+                    
+                    salidaLexico.setText("");
+                    
+                    java_cup.runtime.Symbol token;
+                    while ((token = objLexico.next_token()).sym != sintactico.sym.EOF) {
+                        salidaLexico.append(objLexico.obtenerTokens().get(objLexico.obtenerTokens().size() - 1) + "\n");
+                    }
+                } catch(Exception ex) {
+                    System.out.println("Error al analizar el código: " + ex.getMessage());
+                }
     }
 
     private void cerrarVentana() {
@@ -472,7 +485,7 @@ public class FeralCompiler extends javax.swing.JFrame {
         botonAnalizar.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e) {
-                // codigo
+                analizarLexico();
             }
             
             @Override
