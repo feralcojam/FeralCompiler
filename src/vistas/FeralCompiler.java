@@ -40,24 +40,36 @@ public class FeralCompiler extends javax.swing.JFrame {
 
     private void analizarSintactico() {
         String codigoIngresado = escritorCodigo.getText();
+        salidaSintactico.setText("");
         try {
             java.io.StringReader lector = new java.io.StringReader(codigoIngresado);
-            
+
             lexico.Lexico objLexico = new lexico.Lexico(lector);
             
             sintactico.Sintactico objSintactico = new sintactico.Sintactico(objLexico);
             
-            salidaSintactico.setText("");
-            
             objSintactico.parse();
-            salidaSintactico.append("Análisis sintáctico realizado con éxito.");
+            
+            java.util.List<String> errores = objSintactico.getErrores();
+            if (errores.isEmpty()) {
+                salidaSintactico.setText("El análisis sintáctico se ha realizado con éxito.");
+            } else {
+                for (String error : errores) {
+                    salidaSintactico.append(error + "\n");
+                }
+            }
         } catch (Exception ex) {
-            String mensajeDeError = "Error sintáctico: " + ex.getMessage();
+            salidaSintactico.setText("Error detectado:\n");
             
-            int linea = ex.getMessage().contains("line") ? Integer.parseInt(ex.getMessage().split("line")[1].split(":")[0].trim()) : -1;
-            int columna = ex.getMessage().contains("column") ? Integer.parseInt(ex.getMessage().split("column")[1].split(":")[0].trim()) : -1;
+            sintactico.Sintactico objSintactico = new sintactico.Sintactico(null);
             
-            salidaSintactico.append("Error sintáctico en la línea " + linea + ", columna " + columna + ": " + mensajeDeError + "\n");
+            java.util.List<String> errores = objSintactico.getErrores();
+            
+            for (String error: errores) {
+                salidaSintactico.append(error + "\n");
+            }
+            
+            salidaSintactico.append("ERROR: " + ex.getMessage());
         }
     }
     

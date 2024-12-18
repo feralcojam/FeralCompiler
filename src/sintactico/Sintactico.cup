@@ -4,14 +4,26 @@ import java_cup.runtime.Symbol;
 
 parser code
 {:
+    private java.util.List<String> errores = new java.util.ArrayList<>();
     private Symbol simbolo;
     
+    @Override
     public void syntax_error(Symbol simbolo) {
-        this.simbolo = simbolo;
+        String mensaje = "Error sintáctico en línea " + simbolo.left + ", columna " + simbolo.right + 
+                         ": no se esperaba el simbolo: " + "\"" + simbolo.value + "\"";
+        errores.add(mensaje);
     }
 
-    public Symbol getSimbolo() {
-        return this.simbolo;
+    @Override
+    public void unrecovered_syntax_error(Symbol simbolo) throws Exception {
+        String mensaje = "Error crítico en línea " + simbolo.left + ", columna " + simbolo.right + 
+                         ": no se esperaba el simbolo: \"" + simbolo.value + "\"";
+        errores.add(mensaje);
+        throw new Exception(mensaje);
+    }
+
+    public java.util.List<String> getErrores() {
+        return errores;
     }
 :}
 
